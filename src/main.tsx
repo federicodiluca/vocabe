@@ -8,8 +8,6 @@ import { ReminderEffect } from '@/app/ReminderEffect'
 import { router } from '@/app/router'
 import { setStorageAdapter } from '@/core/storage/store'
 import { createNativeAdapter, preloadNativeValue } from '@/core/storage/nativeAdapter'
-import { initIap } from '@/core/iap'
-import { MONETIZATION } from '@/core/features'
 import './index.css'
 
 async function bootstrap() {
@@ -33,13 +31,6 @@ async function bootstrap() {
     import('@capacitor/splash-screen')
       .then(({ SplashScreen }) => SplashScreen.hide())
       .catch(() => {})
-  }
-
-  // The web IAP SDK is a sizeable chunk (~230 KB gzip) — only load it, and only on
-  // idle, when monetization is actually turned on.
-  if (MONETIZATION) {
-    const idle = window.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1500))
-    idle(() => void initIap())
   }
 }
 

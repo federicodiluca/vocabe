@@ -23,11 +23,11 @@ Stack: Vite, React, TypeScript, Tailwind, react-router, vite-plugin-pwa.
 ```
 src/
   app/        shell, routing, tema
-  core/       content, storage, srs (Leitner), streak, badges, share, challenge
-  state/      contesto + persistenza
-  features/   daily · recall · explore · progress · settings · challenge · paywall
+  core/       content, storage, srs (Leitner), streak, badges, share, challenge, recap
+  state/      store esterno + persistenza
+  features/   daily · recall · explore · progress · settings · challenge · recap
   ui/         componenti condivisi
-  data/       words.json (386 voci)
+  data/       words.json (386 voci) + collections.json (8 raccolte)
 scripts/
   build-seo.mjs    genera dopo la build /parole/<slug>/, glossario, sitemap.xml
   build-icons.mjs  rigenera le icone da icon-source.svg (npm run icons:build)
@@ -40,8 +40,8 @@ GitHub Actions pubblica su GitHub Pages a ogni push su `main`
 
 ## Note
 
-`android/` contiene un wrapper Capacitor e `src/core/{ads,iap}` l'aggancio a AdMob / RevenueCat:
-inattivi finché le chiavi in `.env` non sono impostate (`.env.example`).
+`android/` contiene un wrapper Capacitor per la build dell'app. Vocabe è gratuito: nessuna
+pubblicità, nessun acquisto, nessun servizio di terze parti.
 
 ---
 

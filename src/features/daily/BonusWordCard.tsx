@@ -1,37 +1,18 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { bonusWordForDay } from '@/core/content/words'
 import { useIsLearned } from '@/state/hooks'
 import { markLearned, unmarkLearned } from '@/state/store'
-import { useIsPro } from '@/core/iap/useIsPro'
-import { MONETIZATION } from '@/core/features'
-import { ads, initAds } from '@/core/ads'
 import { Button } from '@/ui/Button'
 import { Card } from '@/ui/Card'
 import { Icon } from '@/ui/Icon'
 import { WordDetails } from './WordDetails'
 
+/** A second word, offered once the day's word has been learned. */
 export function BonusWordCard() {
-  const isPro = useIsPro()
   const bonusWord = useMemo(() => bonusWordForDay(), [])
   const learned = useIsLearned(bonusWord?.id ?? '')
 
-  const [revealed, setRevealed] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState<string | null>(null)
-
   if (!bonusWord) return null
-
-  async function unlockWithAd() {
-    setLoading(true)
-    setMessage(null)
-    await initAds()
-    const result = await ads().showRewarded()
-    setLoading(false)
-    if (result === 'rewarded') setRevealed(true)
-    else if (result === 'unavailable') setMessage('Disponibile solo nell’app Android.')
-    else if (result === 'closed') setMessage('Guarda il video fino alla fine per sbloccarla.')
-    else setMessage('Nessun video disponibile ora, riprova più tardi.')
-  }
 
   return (
     <Card className="border-dashed">
@@ -40,38 +21,25 @@ export function BonusWordCard() {
         Parola bonus
       </div>
 
-      {revealed || isPro || !MONETIZATION ? (
-        <>
-          <h2 className="mb-4 font-reading text-2xl font-semibold">{bonusWord.term}</h2>
-          <WordDetails word={bonusWord} />
-          <div className="mt-4">
-            {learned ? (
-              <div className="flex items-center justify-between rounded-2xl bg-brand-soft px-4 py-3 text-brand">
-                <span className="inline-flex items-center gap-2 font-semibold">
-                  <Icon name="check" size={18} /> Imparata oggi
-                </span>
-                <button className="text-sm underline" onClick={() => unmarkLearned(bonusWord.id)}>
-                  annulla
-                </button>
-              </div>
-            ) : (
-              <Button className="w-full" onClick={() => markLearned(bonusWord.id)}>
-                <Icon name="check" size={18} /> Segna come imparata
-              </Button>
-            )}
+      <h2 className="mb-4 font-reading text-2xl font-semibold">{bonusWord.term}</h2>
+      <WordDetails word={bonusWord} />
+
+      <div className="mt-4">
+        {learned ? (
+          <div className="flex items-center justify-between rounded-2xl bg-brand-soft px-4 py-3 text-brand">
+            <span className="inline-flex items-center gap-2 font-semibold">
+              <Icon name="check" size={18} /> Imparata oggi
+            </span>
+            <button className="text-sm underline" onClick={() => unmarkLearned(bonusWord.id)}>
+              annulla
+            </button>
           </div>
-        </>
-      ) : (
-        <>
-          <p className="mb-4 text-sm text-ink-soft">
-            Guarda un breve video per sbloccare una seconda parola, oggi.
-          </p>
-          <Button variant="outline" className="w-full" disabled={loading} onClick={unlockWithAd}>
-            {loading ? 'Caricamento…' : 'Guarda un video per sbloccarla'}
+        ) : (
+          <Button className="w-full" onClick={() => markLearned(bonusWord.id)}>
+            <Icon name="check" size={18} /> Segna come imparata
           </Button>
-          {message && <p className="mt-2 text-center text-sm text-ink-soft">{message}</p>}
-        </>
-      )}
+        )}
+      </div>
     </Card>
   )
 }

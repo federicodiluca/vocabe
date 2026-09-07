@@ -2,14 +2,10 @@ import { useRef, useState } from 'react'
 import { useProgressState } from '@/state/hooks'
 import { updateSettings, replaceProgress, resetProgress } from '@/state/store'
 import { exportState, parseImported } from '@/core/storage/store'
-import { useIsPro } from '@/core/iap/useIsPro'
-import { MONETIZATION } from '@/core/features'
 import type { ReadingFont, TextSize, ThemeSetting } from '@/core/types'
 import { Button } from '@/ui/Button'
 import { Card } from '@/ui/Card'
-import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
-import { PaywallSheet } from '@/features/paywall/PaywallSheet'
 
 const THEMES: { value: ThemeSetting; label: string }[] = [
   { value: 'system', label: 'Sistema' },
@@ -57,10 +53,8 @@ function Choice<T extends string>({
 
 export function SettingsPage() {
   const state = useProgressState()
-  const isPro = useIsPro()
   const fileRef = useRef<HTMLInputElement>(null)
   const [msg, setMsg] = useState<string | null>(null)
-  const [paywallOpen, setPaywallOpen] = useState(false)
 
   function flash(text: string) {
     setMsg(text)
@@ -88,29 +82,6 @@ export function SettingsPage() {
 
   return (
     <div className="space-y-6 pt-2">
-      {MONETIZATION && (
-        <section>
-          <button
-            onClick={() => setPaywallOpen(true)}
-            className={cn(
-              'flex w-full items-center justify-between rounded-2xl border p-4 text-left transition',
-              isPro ? 'border-brand bg-brand-soft' : 'border-line bg-paper-raised',
-            )}
-          >
-            <span>
-              <span className="flex items-center gap-1.5 font-serif text-lg font-semibold">
-                <Icon name="sparkle" size={18} className={isPro ? 'text-brand' : undefined} />
-                Vocabe Pro
-              </span>
-              <span className="text-sm text-ink-soft">
-                {isPro ? 'Attivo — grazie del supporto' : 'Via la pubblicità, tutto sbloccato'}
-              </span>
-            </span>
-            {!isPro && <span className="text-sm font-semibold text-brand">Scopri</span>}
-          </button>
-        </section>
-      )}
-
       <section className="space-y-4">
         <div>
           <h2 className="mb-2 text-sm font-semibold text-ink-soft">Tema</h2>
@@ -226,8 +197,6 @@ export function SettingsPage() {
           Federico Di Luca
         </a>
       </p>
-
-      <PaywallSheet open={paywallOpen} onClose={() => setPaywallOpen(false)} />
     </div>
   )
 }
