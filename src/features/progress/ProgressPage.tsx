@@ -149,7 +149,7 @@ export function ProgressPage() {
                 </button>
                 {open === id && (
                   <div className="border-t border-line px-4 py-4">
-                    <WordDetails word={word!} />
+                    <WordDetails word={word!} learnAction />
                   </div>
                 )}
               </li>

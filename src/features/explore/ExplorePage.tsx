@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WORDS } from '@/core/content/words'
-import { COLLECTIONS, collectionProgress } from '@/core/content/collections'
+import { COLLECTIONS, collectionProgress, collectionWords } from '@/core/content/collections'
 import { useProgressSlice } from '@/state/hooks'
 import type { WordCategory } from '@/core/types'
 import { Icon } from '@/ui/Icon'
@@ -75,6 +75,7 @@ export function ExplorePage() {
         <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
           {COLLECTIONS.map((c) => {
             const done = collectionProgress(c, learned)
+            const total = collectionWords(c).length
             return (
               <Link
                 key={c.id}
@@ -83,11 +84,11 @@ export function ExplorePage() {
               >
                 <span className="font-reading text-sm font-semibold leading-snug">{c.name}</span>
                 <span className="mt-3 text-xs text-ink-soft">
-                  {done === c.wordIds.length ?
+                  {done === total ?
                     <span className="flex items-center gap-1 text-brand">
                       <Icon name="medal" size={13} /> completata
                     </span>
-                  : `${done}/${c.wordIds.length}`}
+                  : `${done}/${total}`}
                 </span>
               </Link>
             )

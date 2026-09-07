@@ -23,7 +23,9 @@ export function CollectionPage() {
 
   return (
     <div className="space-y-4 pt-2">
-      <Link to="/esplora" className="flex items-center gap-1 text-sm text-ink-soft">
+      {/* `replace`, so back from here goes to whatever came before Esplora
+          instead of bouncing between the list and the collection. */}
+      <Link to="/esplora" replace className="flex items-center gap-1 text-sm text-ink-soft">
         <Icon name="compass" size={16} /> Tutte le raccolte
       </Link>
 

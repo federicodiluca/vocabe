@@ -1,5 +1,5 @@
 import type { ProgressState } from '@/core/types'
-import { COLLECTIONS, collectionProgress } from '@/core/content/collections'
+import { COLLECTIONS, isCollectionComplete } from '@/core/content/collections'
 
 export type Badge = {
   id: string
@@ -13,7 +13,7 @@ const learnedCount = (s: ProgressState) => Object.keys(s.learned).length
 const masteredCount = (s: ProgressState) =>
   Object.values(s.learned).filter((e) => e.box >= 5).length
 const completedCollections = (s: ProgressState) =>
-  COLLECTIONS.filter((c) => collectionProgress(c, s.learned) === c.wordIds.length).length
+  COLLECTIONS.filter((c) => isCollectionComplete(c, s.learned)).length
 
 export const BADGES: Badge[] = [
   { id: 'first-word', name: 'Prima parola', hint: 'Impara la tua prima parola', earned: (s) => learnedCount(s) >= 1 },

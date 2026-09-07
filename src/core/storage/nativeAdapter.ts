@@ -18,7 +18,9 @@ export function createNativeAdapter(initialValue: string | null): StorageAdapter
     read: () => cache,
     write: (value) => {
       cache = value
-      void Preferences.set({ key: KEY, value })
+      // A rejected write must not surface as an unhandled rejection: the cache
+      // already holds the value, and the next write will try the disk again.
+      void Preferences.set({ key: KEY, value }).catch(() => {})
     },
   }
 }

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useToday } from '@/app/useToday'
 import { wordForDay } from '@/core/content/words'
 import { useIsLearned } from '@/state/hooks'
 import { markLearned, unmarkLearned } from '@/state/store'
@@ -12,7 +13,12 @@ import { BonusWordCard } from './BonusWordCard'
 const todayLabel = () =>
   new Date().toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long' })
 
+/** Remounted when the date rolls over, so no local state survives into the new day. */
 export function DailyPage() {
+  return <DailyWord key={useToday()} />
+}
+
+function DailyWord() {
   const word = useMemo(() => wordForDay(), [])
   const learned = useIsLearned(word.id)
   const [revealed, setRevealed] = useState(learned)

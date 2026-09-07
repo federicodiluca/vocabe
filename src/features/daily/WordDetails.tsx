@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import type { Word } from '@/core/types'
-import { useIsFavorite, useNote } from '@/state/hooks'
-import { toggleFavorite, setNote } from '@/state/store'
+import { useIsFavorite, useIsLearned, useNote } from '@/state/hooks'
+import { toggleFavorite, setNote, markLearned, unmarkLearned } from '@/state/store'
 import { speak, speechAvailable } from '@/core/speech'
+import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
 
@@ -15,8 +16,19 @@ const CATEGORY_LABEL: Record<NonNullable<Word['category']>, string> = {
   straniera: 'straniera',
 }
 
-export function WordDetails({ word }: { word: Word }) {
+export function WordDetails({
+  word,
+  /**
+   * Show the "learn" toggle. Off where the screen already owns that action —
+   * the daily card and the bonus card have their own button right below.
+   */
+  learnAction = false,
+}: {
+  word: Word
+  learnAction?: boolean
+}) {
   const fav = useIsFavorite(word.id)
+  const learned = useIsLearned(word.id)
   const savedNote = useNote(word.id)
   const [noteOpen, setNoteOpen] = useState(Boolean(savedNote))
   const [draft, setDraft] = useState(savedNote)
@@ -90,6 +102,22 @@ export function WordDetails({ word }: { word: Word }) {
           className="w-full rounded-2xl border border-line bg-paper-raised p-3 text-sm outline-none focus:border-brand"
         />
       )}
+
+      {learnAction &&
+        (learned ? (
+          <div className="flex items-center justify-between rounded-2xl bg-brand-soft px-4 py-2.5 text-sm text-brand">
+            <span className="inline-flex items-center gap-2 font-semibold">
+              <Icon name="check" size={16} /> Imparata
+            </span>
+            <button className="text-xs underline" onClick={() => unmarkLearned(word.id)}>
+              annulla
+            </button>
+          </div>
+        ) : (
+          <Button variant="outline" className="w-full py-2.5 text-sm" onClick={() => markLearned(word.id)}>
+            <Icon name="check" size={16} /> Segna come imparata
+          </Button>
+        ))}
 
       <div className="flex flex-wrap gap-2 text-xs text-ink-soft">
         {word.category && (

@@ -5,9 +5,18 @@ import { fileURLToPath } from 'node:url'
 const path = fileURLToPath(new URL('../src/data/words.json', import.meta.url))
 const words = JSON.parse(readFileSync(path, 'utf8')) as Array<Record<string, unknown>>
 
+const collectionsPath = fileURLToPath(new URL('../src/data/collections.json', import.meta.url))
+const collections = JSON.parse(readFileSync(collectionsPath, 'utf8')) as Array<
+  Record<string, unknown>
+>
+
 const CATEGORIES = ['comune', 'letteraria', 'scientifica', 'antica', 'regionale', 'straniera']
 const errors: string[] = []
 const seen = new Set<string>()
+// Two words sharing a term or a definition would make a recall question
+// unanswerable: one of the wrong options would read exactly like the right one.
+const seenTerms = new Map<string, string>()
+const seenMeanings = new Map<string, string>()
 
 words.forEach((w, i) => {
   const at = `#${i} (${String(w.term ?? '??')})`
@@ -17,8 +26,21 @@ words.forEach((w, i) => {
   else seen.add(id as string)
 
   if (typeof w.term !== 'string' || !w.term) errors.push(`${at}: term mancante`)
+  else {
+    const key = (w.term as string).toLowerCase()
+    const other = seenTerms.get(key)
+    if (other) errors.push(`${at}: term già usato da "${other}"`)
+    else seenTerms.set(key, String(id))
+  }
+
   if (typeof w.meaning !== 'string' || (w.meaning as string).length < 10)
     errors.push(`${at}: meaning troppo corto`)
+  else {
+    const other = seenMeanings.get(w.meaning as string)
+    if (other) errors.push(`${at}: meaning identico a quello di "${other}"`)
+    else seenMeanings.set(w.meaning as string, String(id))
+  }
+
   if (!Array.isArray(w.examples) || w.examples.length < 1)
     errors.push(`${at}: servono almeno 1 esempio`)
   if (w.category !== undefined && !CATEGORIES.includes(w.category as string))
@@ -27,8 +49,31 @@ words.forEach((w, i) => {
     errors.push(`${at}: difficulty deve essere 1, 2 o 3`)
 })
 
+const collectionIds = new Set<string>()
+collections.forEach((c, i) => {
+  const at = `raccolta #${i} (${String(c.name ?? '??')})`
+  const id = c.id
+  if (typeof id !== 'string' || !/^[a-z0-9-]+$/.test(id)) errors.push(`${at}: id mancante o non slug`)
+  else if (collectionIds.has(id)) errors.push(`${at}: id duplicato "${id}"`)
+  else collectionIds.add(id)
+
+  if (typeof c.name !== 'string' || !c.name) errors.push(`${at}: name mancante`)
+  if (typeof c.description !== 'string' || !c.description) errors.push(`${at}: description mancante`)
+
+  if (!Array.isArray(c.wordIds) || c.wordIds.length < 10) {
+    errors.push(`${at}: servono almeno 10 parole`)
+    return
+  }
+  const inside = new Set<string>()
+  for (const wordId of c.wordIds as string[]) {
+    if (!seen.has(wordId)) errors.push(`${at}: la parola "${wordId}" non esiste`)
+    if (inside.has(wordId)) errors.push(`${at}: la parola "${wordId}" compare due volte`)
+    inside.add(wordId)
+  }
+})
+
 if (errors.length) {
   console.error(`❌ ${errors.length} problemi:\n` + errors.map((e) => '  - ' + e).join('\n'))
   process.exit(1)
 }
-console.log(`✅ ${words.length} parole valide.`)
+console.log(`✅ ${words.length} parole e ${collections.length} raccolte valide.`)
