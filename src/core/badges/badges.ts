@@ -1,4 +1,5 @@
 import type { ProgressState } from '@/core/types'
+import { COLLECTIONS, collectionProgress } from '@/core/content/collections'
 
 export type Badge = {
   id: string
@@ -11,6 +12,8 @@ export type Badge = {
 const learnedCount = (s: ProgressState) => Object.keys(s.learned).length
 const masteredCount = (s: ProgressState) =>
   Object.values(s.learned).filter((e) => e.box >= 5).length
+const completedCollections = (s: ProgressState) =>
+  COLLECTIONS.filter((c) => collectionProgress(c, s.learned) === c.wordIds.length).length
 
 export const BADGES: Badge[] = [
   { id: 'first-word', name: 'Prima parola', hint: 'Impara la tua prima parola', earned: (s) => learnedCount(s) >= 1 },
@@ -20,6 +23,8 @@ export const BADGES: Badge[] = [
   { id: 'streak-7', name: 'Una settimana', hint: '7 giorni consecutivi', earned: (s) => s.streak.longest >= 7 },
   { id: 'streak-30', name: 'Un mese intero', hint: '30 giorni consecutivi', earned: (s) => s.streak.longest >= 30 },
   { id: 'memoria-ferrea', name: 'Memoria ferrea', hint: 'Padroneggia 20 parole ai ripassi', earned: (s) => masteredCount(s) >= 20 },
+  { id: 'raccolta-1', name: 'Collezionista', hint: 'Completa una raccolta', earned: (s) => completedCollections(s) >= 1 },
+  { id: 'raccolta-3', name: 'Scaffale pieno', hint: 'Completa tre raccolte', earned: (s) => completedCollections(s) >= 3 },
 ]
 
 /** Returns the newly earned badge ids given the current state. */

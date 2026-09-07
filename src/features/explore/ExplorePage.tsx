@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { WORDS } from '@/core/content/words'
+import { COLLECTIONS, collectionProgress } from '@/core/content/collections'
 import { useProgressSlice } from '@/state/hooks'
 import type { WordCategory } from '@/core/types'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
-import { WordDetails } from '@/features/daily/WordDetails'
+import { WordRow } from './WordRow'
 
 const CATEGORIES: { value: WordCategory | 'tutte'; label: string }[] = [
   { value: 'tutte', label: 'Tutte' },
@@ -68,8 +70,33 @@ export function ExplorePage() {
 
   return (
     <div className="space-y-4 pt-2">
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-ink-soft">Raccolte</h2>
+        <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
+          {COLLECTIONS.map((c) => {
+            const done = collectionProgress(c, learned)
+            return (
+              <Link
+                key={c.id}
+                to={`/esplora/${c.id}`}
+                className="flex w-40 shrink-0 flex-col justify-between rounded-2xl border border-line bg-paper-raised p-3 text-left transition hover:border-brand"
+              >
+                <span className="font-reading text-sm font-semibold leading-snug">{c.name}</span>
+                <span className="mt-3 text-xs text-ink-soft">
+                  {done === c.wordIds.length ?
+                    <span className="flex items-center gap-1 text-brand">
+                      <Icon name="medal" size={13} /> completata
+                    </span>
+                  : `${done}/${c.wordIds.length}`}
+                </span>
+              </Link>
+            )
+          })}
+        </div>
+      </section>
+
       <p className="text-sm text-ink-soft">
-        Tutte le {WORDS.length} parole di Vocabe. Filtra, cerca, ripassa.
+        Oppure sfoglia tutte le {WORDS.length} parole di Vocabe.
       </p>
 
       <input
@@ -154,26 +181,12 @@ export function ExplorePage() {
       ) : (
         <ul className="space-y-2">
           {results.slice(0, visible).map((word) => (
-            <li key={word.id} className="rounded-2xl border border-line bg-paper-raised">
-              <button
-                className="flex w-full items-center justify-between gap-2 px-4 py-3 text-left"
-                onClick={() => setOpen(open === word.id ? null : word.id)}
-              >
-                <span className="min-w-0">
-                  <span className="font-reading text-lg font-semibold">{word.term}</span>
-                  <span className="block truncate text-xs text-ink-soft">{word.meaning}</span>
-                </span>
-                <span className="flex shrink-0 items-center gap-1.5 text-brand">
-                  {favs.has(word.id) && <Icon name="star-filled" size={15} />}
-                  {word.id in learned && <Icon name="check" size={16} />}
-                </span>
-              </button>
-              {open === word.id && (
-                <div className="border-t border-line px-4 py-4">
-                  <WordDetails word={word} />
-                </div>
-              )}
-            </li>
+            <WordRow
+              key={word.id}
+              word={word}
+              open={open === word.id}
+              onToggle={() => setOpen(open === word.id ? null : word.id)}
+            />
           ))}
           {visible < results.length && <div ref={sentinel} className="h-8" aria-hidden />}
         </ul>
