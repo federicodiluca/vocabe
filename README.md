@@ -40,8 +40,9 @@ GitHub Actions pubblica su GitHub Pages a ogni push su `main`
 
 ## Note
 
-`android/` contiene un wrapper Capacitor per la build dell'app. Vocabe è gratuito: nessuna
-pubblicità, nessun acquisto, nessun servizio di terze parti.
+Vocabe è gratuito e senza pubblicità: nessun account, nessun acquisto, nessun servizio di
+terze parti, nessuna analitica. Non c'è app da installare dagli store — dal browser di uno
+smartphone si aggiunge alla schermata home e si comporta come un'app, anche offline.
 
 ---
 

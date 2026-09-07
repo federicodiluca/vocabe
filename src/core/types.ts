@@ -46,9 +46,6 @@ export type Settings = {
   theme: ThemeSetting
   readingFont: ReadingFont
   textSize: TextSize
-  /** local reminder time "HH:mm" — used by native notifications later */
-  reminderTime: string
-  reminderEnabled: boolean
   /** display name used when challenging a friend */
   name: string
 }

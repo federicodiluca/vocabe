@@ -17,7 +17,7 @@ type Listener = () => void
 let state: ProgressState | null = null
 const listeners = new Set<Listener>()
 
-/** Call once at startup, after the native storage adapter is installed. */
+/** Call once at startup, before the first render. */
 export function initProgress(): void {
   state = loadState()
 }

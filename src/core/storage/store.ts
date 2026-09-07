@@ -9,8 +9,6 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'system',
   readingFont: 'serif',
   textSize: 'normale',
-  reminderTime: '08:30',
-  reminderEnabled: false,
   name: '',
 }
 
@@ -31,35 +29,20 @@ export function defaultState(): ProgressState {
   }
 }
 
-/**
- * Storage adapter. Web uses localStorage; the native build swaps this for
- * Capacitor Preferences without touching callers.
- */
-export interface StorageAdapter {
-  read(): string | null
-  write(value: string): void
+function read(): string | null {
+  try {
+    return localStorage.getItem(KEY)
+  } catch {
+    return null
+  }
 }
 
-const webAdapter: StorageAdapter = {
-  read() {
-    try {
-      return localStorage.getItem(KEY)
-    } catch {
-      return null
-    }
-  },
-  write(value) {
-    try {
-      localStorage.setItem(KEY, value)
-    } catch {
-      /* private mode / quota — state stays in memory for this session */
-    }
-  },
-}
-
-let adapter: StorageAdapter = webAdapter
-export function setStorageAdapter(a: StorageAdapter) {
-  adapter = a
+function write(value: string): void {
+  try {
+    localStorage.setItem(KEY, value)
+  } catch {
+    /* private mode / quota — state stays in memory for this session */
+  }
 }
 
 type RawState = Record<string, unknown>
@@ -132,7 +115,7 @@ export function normalize(input: unknown): ProgressState {
 }
 
 export function loadState(): ProgressState {
-  const raw = adapter.read()
+  const raw = read()
   if (!raw) return defaultState()
   try {
     return normalize(JSON.parse(raw))
@@ -142,7 +125,7 @@ export function loadState(): ProgressState {
 }
 
 export function saveState(state: ProgressState): void {
-  adapter.write(JSON.stringify(state))
+  write(JSON.stringify(state))
 }
 
 export function exportState(state: ProgressState): string {

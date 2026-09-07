@@ -4,7 +4,6 @@ import { updateSettings, replaceProgress, resetProgress } from '@/state/store'
 import { exportState, parseImported } from '@/core/storage/store'
 import type { ReadingFont, TextSize, ThemeSetting } from '@/core/types'
 import { Button } from '@/ui/Button'
-import { Card } from '@/ui/Card'
 import { cn } from '@/ui/cn'
 
 const THEMES: { value: ThemeSetting; label: string }[] = [
@@ -109,34 +108,6 @@ export function SettingsPage() {
             onChange={(textSize) => updateSettings({ textSize })}
           />
         </div>
-      </section>
-
-      <section>
-        <h2 className="mb-2 text-sm font-semibold text-ink-soft">Promemoria giornaliero</h2>
-        <Card className="space-y-3 p-4">
-          <label className="flex items-center justify-between">
-            <span className="text-sm">Attiva promemoria</span>
-            <input
-              type="checkbox"
-              checked={state.settings.reminderEnabled}
-              onChange={(e) => updateSettings({ reminderEnabled: e.target.checked })}
-              className="h-5 w-9 appearance-none rounded-full bg-line transition checked:bg-brand relative before:absolute before:top-0.5 before:left-0.5 before:h-4 before:w-4 before:rounded-full before:bg-white before:transition checked:before:translate-x-4"
-            />
-          </label>
-          <label className="flex items-center justify-between">
-            <span className="text-sm">Orario</span>
-            <input
-              type="time"
-              value={state.settings.reminderTime}
-              onChange={(e) => updateSettings({ reminderTime: e.target.value })}
-              className="rounded-xl border border-line bg-paper-raised px-3 py-1.5 text-sm"
-            />
-          </label>
-          <p className="text-xs text-ink-soft">
-            Nell’app Android ricevi una notifica puntuale ogni giorno. Sul web questa
-            impostazione resta salvata ma non ha ancora effetto.
-          </p>
-        </Card>
       </section>
 
       <section>

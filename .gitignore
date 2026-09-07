@@ -13,14 +13,6 @@ dist-ssr
 *.local
 .env
 .env.*
-!.env.example
-
-# Android / iOS release secrets — never commit
-android/key.properties
-*.keystore
-*.jks
-android/app/google-services.json
-ios/App/App/GoogleService-Info.plist
 
 # Editor directories and files
 .vscode/*
@@ -34,5 +26,3 @@ ios/App/App/GoogleService-Info.plist
 *.sln
 *.sw?
 
-# La cartella ios/ vive solo su feature/store-release (lavoro native).
-/ios/

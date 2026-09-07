@@ -6,8 +6,8 @@ import { Icon } from '@/ui/Icon'
 import { WordRow } from './WordRow'
 
 /**
- * A collection is its own route rather than a piece of Explore's state: on
- * Android the back button has to come back here, not close the app.
+ * A collection is its own route rather than a piece of Explore's state, so the
+ * back button comes back to the list instead of leaving the app.
  */
 export function CollectionPage() {
   const { collectionId } = useParams()
