@@ -181,7 +181,8 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
 }
 
 /**
- * Vocabe's mark, same geometry as scripts/icon-source.svg and src/ui/Logo.tsx.
+ * Vocabe's mark, same geometry as scripts/icon-source.svg and src/ui/Logo.tsx,
+ * minus the underline bar — here the wordmark sits where the bar would be.
  * `size` is the height of the 512-unit design grid; (x, y) is its top-left.
  */
 function drawMark(ctx: CanvasRenderingContext2D, x: number, y: number, size: number) {

@@ -4,8 +4,9 @@ Una parola italiana al giorno: significato, esempi, etimologia. Il giorno dopo u
 
 **[federicodiluca.github.io/vocabe](https://federicodiluca.github.io/vocabe/)**
 
-Web app (PWA), funziona offline. Nessun account: i progressi stanno in `localStorage`,
-esportabili come file JSON dalle impostazioni.
+Ripetizione spaziata per il ripasso, glossario di 386 parole e raccolte tematiche da
+completare. Web app (PWA), funziona offline. Nessun account: i progressi stanno in
+`localStorage`, esportabili come file JSON dalle impostazioni.
 
 ## Sviluppo
 
@@ -14,19 +15,20 @@ Node 20.19.1.
 ```bash
 npm install
 npm run dev
-npm run words:validate   # valida src/data/words.json
+npm test                 # 82 test sulla logica pura
+npm run words:validate   # valida words.json e collections.json
 npm run build
 ```
 
 Stack: Vite, React, TypeScript, Tailwind, react-router, vite-plugin-pwa.
 
-```
+```text
 src/
   app/        shell, routing, tema
   core/       content, storage, srs (Leitner), streak, badges, share, challenge, recap
   state/      store esterno + persistenza
   features/   daily · recall · explore · progress · settings · challenge · recap
-  ui/         componenti condivisi
+  ui/         componenti condivisi (Logo, Icon, Button, Card, Sheet)
   data/       words.json (386 voci) + collections.json (8 raccolte)
 scripts/
   build-seo.mjs    genera dopo la build /parole/<slug>/, glossario, sitemap.xml

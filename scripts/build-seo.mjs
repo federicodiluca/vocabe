@@ -73,6 +73,8 @@ function shell({ title, description, canonical, jsonLd, body }) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="it_IT">
 <meta property="og:url" content="${canonical}">
+<meta property="og:site_name" content="Vocabe">
+<meta property="og:image" content="${SITE}icons/icon-512.png">
 <link rel="icon" type="image/svg+xml" href="${BASE}favicon.svg">
 <style>${CSS}</style>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
