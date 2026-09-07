@@ -9,6 +9,7 @@ import { decodeChallenge, type Challenge } from '@/core/challenge'
 import { ChallengeSheet } from '@/features/challenge/ChallengeSheet'
 import { RecapSheet } from '@/features/recap/RecapSheet'
 import { Icon, type IconName } from '@/ui/Icon'
+import { Logo } from '@/ui/Logo'
 import { cn } from '@/ui/cn'
 import { Onboarding } from './Onboarding'
 
@@ -54,7 +55,10 @@ export function Layout() {
   return (
     <div className="mx-auto flex min-h-full w-full max-w-md flex-col">
       <header className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)+1rem)] pb-3">
-        <span className="font-serif text-xl font-semibold tracking-tight">Vocabe</span>
+        <span className="flex items-center gap-2">
+          <Logo size={22} className="text-brand" />
+          <span className="font-serif text-xl font-semibold tracking-tight">Vocabe</span>
+        </span>
         <span
           className={cn(
             'inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold',

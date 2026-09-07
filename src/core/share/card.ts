@@ -92,10 +92,13 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
 
   // header
   ctx.textBaseline = 'alphabetic'
+  // x is nudged so the glyph's own left edge lands on the margin, and the size
+  // is chosen so its foot sits on the wordmark's baseline.
+  drawMark(ctx, pad - 18, 86, 72)
   ctx.fillStyle = COLORS.brand
   ctx.font = `700 30px ${SANS}`
   ctx.save()
-  ctx.translate(pad, 132)
+  ctx.translate(pad + 52, 132)
   drawTracked(ctx, 'VOCABE', 6)
   ctx.restore()
 
@@ -175,6 +178,36 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
   return await new Promise<Blob>((resolve, reject) =>
     canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'),
   )
+}
+
+/**
+ * Vocabe's mark, same geometry as scripts/icon-source.svg and src/ui/Logo.tsx.
+ * `size` is the height of the 512-unit design grid; (x, y) is its top-left.
+ */
+function drawMark(ctx: CanvasRenderingContext2D, x: number, y: number, size: number) {
+  const u = size / 512
+  const p = (a: number, b: number) => [x + a * u, y + b * u] as const
+
+  ctx.save()
+  ctx.fillStyle = COLORS.brand
+  ctx.beginPath()
+  // left arm
+  ctx.moveTo(...p(160, 116))
+  ctx.lineTo(...p(238, 116))
+  ctx.lineTo(...p(268, 330))
+  ctx.lineTo(...p(250, 330))
+  ctx.closePath()
+  // right arm
+  ctx.moveTo(...p(316, 116))
+  ctx.lineTo(...p(368, 116))
+  ctx.lineTo(...p(268, 330))
+  ctx.lineTo(...p(250, 330))
+  ctx.closePath()
+  ctx.fill()
+  // slab serifs
+  ctx.fillRect(...p(130, 100), 122 * u, 18 * u)
+  ctx.fillRect(...p(296, 100), 94 * u, 18 * u)
+  ctx.restore()
 }
 
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {

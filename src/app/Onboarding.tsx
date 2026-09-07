@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { completeOnboarding } from '@/state/store'
 import { Button } from '@/ui/Button'
 import { Icon, type IconName } from '@/ui/Icon'
+import { LogoTile } from '@/ui/Logo'
 import { cn } from '@/ui/cn'
 
 const SLIDES: { icon: IconName; title: string; body: string }[] = [
@@ -36,8 +37,14 @@ export function Onboarding() {
       </div>
 
       <div className="flex flex-1 flex-col items-center justify-center text-center">
-        <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-brand-soft text-brand">
-          <Icon name={slide.icon} size={40} strokeWidth={1.5} />
+        <div className="mb-8">
+          {i === 0 ? (
+            <LogoTile size={80} />
+          ) : (
+            <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-brand-soft text-brand">
+              <Icon name={slide.icon} size={40} strokeWidth={1.5} />
+            </div>
+          )}
         </div>
         <h1 className="mb-3 font-serif text-2xl font-semibold">{slide.title}</h1>
         <p className="max-w-xs text-ink-soft">{slide.body}</p>
