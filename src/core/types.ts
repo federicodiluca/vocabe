@@ -75,6 +75,8 @@ export type ProgressState = {
   notes: Record<string, string>
   /** true once the reader has seen (or skipped) the first-run intro */
   onboarded: boolean
+  /** Monday of the last week whose recap was shown — keeps it to once a week */
+  lastRecapSeen: string | null
   settings: Settings
   /** ISO date (local) the app was first opened */
   startedOn: string

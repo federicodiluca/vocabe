@@ -154,6 +154,11 @@ export function updateSettings(patch: Partial<Settings>): void {
   update((s) => ({ ...s, settings: { ...s.settings, ...patch } }))
 }
 
+/** Remember that the recap for the week starting `weekFrom` has been shown. */
+export function markRecapSeen(weekFrom: string): void {
+  update((s) => (s.lastRecapSeen === weekFrom ? s : { ...s, lastRecapSeen: weekFrom }))
+}
+
 export function completeOnboarding(): void {
   update((s) => (s.onboarded ? s : { ...s, onboarded: true }))
 }

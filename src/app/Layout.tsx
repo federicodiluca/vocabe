@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useProgressSlice } from '@/state/hooks'
+import { getProgress, markRecapSeen } from '@/state/store'
 import { displayStreak } from '@/core/streak/streak'
 import { isDue } from '@/core/srs/leitner'
+import { pendingRecap } from '@/core/recap/recap'
 import { decodeChallenge, type Challenge } from '@/core/challenge'
 import { ChallengeSheet } from '@/features/challenge/ChallengeSheet'
+import { RecapSheet } from '@/features/recap/RecapSheet'
 import { Icon, type IconName } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
 import { Onboarding } from './Onboarding'
@@ -25,6 +28,10 @@ export function Layout() {
 
   const streak = displayStreak(streakBlock)
   const dueCount = useMemo(() => Object.values(learned).filter((e) => isDue(e)).length, [learned])
+
+  // Settled once on mount: the pending week only changes at a week boundary,
+  // and closing the sheet is what clears it.
+  const [recapWeek, setRecapWeek] = useState(() => pendingRecap(getProgress()))
 
   const [incoming, setIncoming] = useState<Challenge | null>(null)
   useEffect(() => {
@@ -98,6 +105,17 @@ export function Layout() {
         incoming={incoming}
         onClose={() => setIncoming(null)}
       />
+
+      {recapWeek && (
+        <RecapSheet
+          open={!incoming}
+          from={recapWeek}
+          onClose={() => {
+            markRecapSeen(recapWeek)
+            setRecapWeek(null)
+          }}
+        />
+      )}
     </div>
   )
 }

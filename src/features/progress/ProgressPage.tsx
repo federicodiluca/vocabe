@@ -3,11 +3,14 @@ import { getWord } from '@/core/content/words'
 import { useProgressState } from '@/state/hooks'
 import { displayStreak } from '@/core/streak/streak'
 import { BADGES } from '@/core/badges/badges'
+import { localDateKey } from '@/core/date'
+import { buildRecap, weekStart } from '@/core/recap/recap'
 import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
 import { WordDetails } from '@/features/daily/WordDetails'
 import { ChallengeSheet } from '@/features/challenge/ChallengeSheet'
+import { RecapSheet } from '@/features/recap/RecapSheet'
 import { Heatmap } from './Heatmap'
 
 function Stat({ value, label }: { value: string | number; label: string }) {
@@ -24,6 +27,10 @@ export function ProgressPage() {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
   const [challengeOpen, setChallengeOpen] = useState(false)
+  const [recapOpen, setRecapOpen] = useState(false)
+
+  const thisWeek = useMemo(() => weekStart(localDateKey()), [])
+  const week = useMemo(() => buildRecap(state, thisWeek), [state, thisWeek])
 
   const entries = useMemo(() => {
     return Object.entries(state.learned)
@@ -55,6 +62,22 @@ export function ProgressPage() {
         {state.streak.freezes} {state.streak.freezes === 1 ? 'salvagente' : 'salvagenti'} — un giorno
         saltato non azzera la serie
       </p>
+
+      <button
+        onClick={() => setRecapOpen(true)}
+        className="flex w-full items-center gap-3 rounded-2xl border border-line bg-paper-raised p-4 text-left transition hover:border-brand"
+      >
+        <Icon name="calendar" size={22} className="shrink-0 text-brand" />
+        <span className="flex-1">
+          <span className="block text-sm font-semibold">Questa settimana</span>
+          <span className="block text-xs text-ink-soft">
+            {week.learnedIds.length}{' '}
+            {week.learnedIds.length === 1 ? 'parola imparata' : 'parole imparate'} in{' '}
+            {week.activeDays} {week.activeDays === 1 ? 'giorno' : 'giorni'}
+          </span>
+        </span>
+        <span className="text-sm font-semibold text-brand">Riepilogo</span>
+      </button>
 
       <Button variant="outline" className="w-full" onClick={() => setChallengeOpen(true)}>
         <Icon name="share" size={18} /> Sfida un amico
@@ -136,6 +159,7 @@ export function ProgressPage() {
       </section>
 
       <ChallengeSheet open={challengeOpen} onClose={() => setChallengeOpen(false)} />
+      <RecapSheet open={recapOpen} from={thisWeek} onClose={() => setRecapOpen(false)} />
     </div>
   )
 }

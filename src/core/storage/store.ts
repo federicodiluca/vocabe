@@ -25,6 +25,7 @@ export function defaultState(): ProgressState {
     favorites: [],
     notes: {},
     onboarded: false,
+    lastRecapSeen: null,
     settings: { ...DEFAULT_SETTINGS },
     startedOn: today,
   }
@@ -124,6 +125,7 @@ export function normalize(input: unknown): ProgressState {
     favorites: Array.isArray(s.favorites) ? s.favorites : base.favorites,
     notes: s.notes && typeof s.notes === 'object' ? s.notes : base.notes,
     onboarded: typeof s.onboarded === 'boolean' ? s.onboarded : base.onboarded,
+    lastRecapSeen: typeof s.lastRecapSeen === 'string' ? s.lastRecapSeen : base.lastRecapSeen,
     settings: { ...base.settings, ...(s.settings ?? {}) },
     startedOn: typeof s.startedOn === 'string' ? s.startedOn : base.startedOn,
   }
