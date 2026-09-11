@@ -1,3 +1,6 @@
+/** Rarity level of a word, 1 = everyday .. 5 = extremely rare. */
+export type Difficulty = 1 | 2 | 3 | 4 | 5
+
 export type WordCategory =
   | 'comune'
   | 'letteraria'
@@ -19,8 +22,8 @@ export type Word = {
   /** a quote, literary use or fun fact tied to the word */
   curiosity?: string
   category?: WordCategory
-  /** 1 = accessibile, 2 = medio, 3 = ostico */
-  difficulty?: 1 | 2 | 3
+  /** rarity, 1 (quotidiana) to 5 (rarissima) — see core/content/levels.ts */
+  difficulty?: Difficulty
 }
 
 /** Leitner box for spaced recall: 1 (soon) .. 5 (mastered) */

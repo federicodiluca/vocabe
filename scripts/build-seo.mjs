@@ -25,6 +25,8 @@ const TODAY = new Date().toISOString().slice(0, 10)
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
+const LEVEL_LABEL = { 1: 'quotidiana', 2: 'colta', 3: 'ricercata', 4: 'rara', 5: 'rarissima' }
+
 const CATEGORY_LABEL = {
   comune: 'comune',
   letteraria: 'letteraria',
@@ -114,7 +116,7 @@ ${word.etymology ? `<h2>Etimologia</h2><p>${esc(word.etymology)}</p>` : ''}
 ${word.curiosity ? `<h2>Lo sapevi?</h2><p>${esc(word.curiosity)}</p>` : ''}
 <p class="tags">
 ${word.category ? `<span>categoria: ${esc(CATEGORY_LABEL[word.category] ?? word.category)}</span>` : ''}
-${word.difficulty ? `<span>difficoltà ${word.difficulty}/3</span>` : ''}
+${word.difficulty ? `<span>livello ${word.difficulty}/5 · ${LEVEL_LABEL[word.difficulty]}</span>` : ''}
 </p>
 <a class="cta" href="${BASE}">Impara una parola al giorno con Vocabe →</a>
 <div class="pager">

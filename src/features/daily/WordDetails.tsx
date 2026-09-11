@@ -3,6 +3,7 @@ import type { Word } from '@/core/types'
 import { useIsFavorite, useIsLearned, useNote } from '@/state/hooks'
 import { toggleFavorite, setNote, markLearned, unmarkLearned } from '@/state/store'
 import { speak, speechAvailable } from '@/core/speech'
+import { levelLabel } from '@/core/content/levels'
 import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
@@ -128,7 +129,7 @@ export function WordDetails({
         {word.difficulty && (
           <span className="rounded-full border border-line px-2 py-0.5">
             {'●'.repeat(word.difficulty)}
-            {'○'.repeat(3 - word.difficulty)} difficoltà
+            {'○'.repeat(5 - word.difficulty)} {levelLabel(word.difficulty).toLowerCase()}
           </span>
         )}
       </div>

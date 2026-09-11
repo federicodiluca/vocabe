@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WORDS } from '@/core/content/words'
 import { COLLECTIONS, collectionProgress, collectionWords } from '@/core/content/collections'
+import { LEVELS } from '@/core/content/levels'
 import { useProgressSlice } from '@/state/hooks'
 import type { WordCategory } from '@/core/types'
 import { Icon } from '@/ui/Icon'
@@ -18,11 +19,9 @@ const CATEGORIES: { value: WordCategory | 'tutte'; label: string }[] = [
   { value: 'scientifica', label: 'Scientifiche' },
 ]
 
-const DIFFICULTIES = [
+const DIFFICULTIES: { value: number; label: string }[] = [
   { value: 0, label: 'Ogni livello' },
-  { value: 1, label: '●' },
-  { value: 2, label: '●●' },
-  { value: 3, label: '●●●' },
+  ...LEVELS.map((l) => ({ value: l.value, label: l.label })),
 ]
 
 const SORTED = [...WORDS].sort((a, b) => a.term.localeCompare(b.term, 'it'))
@@ -133,13 +132,13 @@ export function ExplorePage() {
         ))}
       </div>
 
-      <div className="flex gap-2">
+      <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
         {DIFFICULTIES.map((d) => (
           <button
             key={d.value}
             onClick={() => setDifficulty(d.value)}
             className={cn(
-              'flex-1 rounded-xl border py-1.5 text-xs font-medium transition',
+              'shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium transition',
               difficulty === d.value
                 ? 'border-brand bg-brand-soft text-brand'
                 : 'border-line text-ink-soft',

@@ -45,8 +45,8 @@ words.forEach((w, i) => {
     errors.push(`${at}: servono almeno 1 esempio`)
   if (w.category !== undefined && !CATEGORIES.includes(w.category as string))
     errors.push(`${at}: category "${String(w.category)}" non valida`)
-  if (w.difficulty !== undefined && ![1, 2, 3].includes(w.difficulty as number))
-    errors.push(`${at}: difficulty deve essere 1, 2 o 3`)
+  if (w.difficulty !== undefined && ![1, 2, 3, 4, 5].includes(w.difficulty as number))
+    errors.push(`${at}: difficulty deve essere da 1 a 5`)
 })
 
 const collectionIds = new Set<string>()

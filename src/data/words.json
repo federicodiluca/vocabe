@@ -16,7 +16,7 @@
     "etymology": "Dal greco 'ephḗmeros', «che dura un solo giorno».",
     "curiosity": "In biologia gli efemerotteri sono insetti il cui adulto vive anche solo poche ore.",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "ineluttabile",
@@ -221,7 +221,7 @@
     ],
     "etymology": "Dal latino 'obnubilare', da 'nubes' «nuvola».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "È letteralmente «annuvolare»: 'nubes' è la stessa radice di 'nuvola' e di 'nebulosa'."
   },
   {
@@ -277,7 +277,7 @@
     ],
     "etymology": "Dal latino 'procrastinare', da 'cras' «domani».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 1,
     "curiosity": "Alla parola si contrappone «precrastinare», termine coniato dagli psicologi nel 2014 per chi al contrario porta a termine i compiti troppo in anticipo, con inutile fatica."
   },
   {
@@ -447,7 +447,7 @@
     ],
     "etymology": "Dal greco 'epígonos' «nato dopo»; nel mito, i figli dei Sette contro Tebe.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Nel mito gli Epigoni erano i figli dei Sette contro Tebe: tornarono a combattere e conquistarono la città dove i padri avevano fallito."
   },
   {
@@ -523,7 +523,7 @@
     ],
     "etymology": "Dal latino 'corroborare', da 'robur' «forza, quercia».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Il latino 'robur' vuol dire sia «forza» sia «quercia»: corroborare una tesi è renderla salda come una quercia, come in 'robusto' e 'roborante'."
   },
   {
@@ -542,7 +542,7 @@
     ],
     "etymology": "Dal latino 'exitialis', da 'exitium' «rovina, fine».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Dal latino 'exitium', «rovina, fine»: la stessa radice di 'esito', che però in italiano ha conservato solo il senso neutro di «risultato»."
   },
   {
@@ -580,7 +580,7 @@
     ],
     "etymology": "Dal latino 'coacervus', da 'acervus' «mucchio».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Dal latino 'acervus', «mucchio»: lo stesso della locuzione giuridica «coacervo dei redditi», la loro somma ai fini fiscali."
   },
   {
@@ -599,7 +599,7 @@
     ],
     "etymology": "Dal latino 'blandus' «carezzevole, lusinghiero».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "esimersi",
@@ -617,7 +617,7 @@
     ],
     "etymology": "Dal latino 'eximere' «togliere fuori», da 'ex-' ed 'emere' «prendere».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Da 'eximere', «togliere fuori»: la stessa radice di 'esimio' (chi è tolto dalla massa perché eccezionale) e di 'esempio'."
   },
   {
@@ -636,7 +636,7 @@
     ],
     "etymology": "Dal latino 'acclivis', da 'clivus' «pendio». Il contrario è 'declive'.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "Ha come contrario 'declive'; entrambi da 'clivus', «pendio», che sopravvive nei nomi di antiche strade romane come il Clivo Capitolino."
   },
   {
@@ -673,7 +673,7 @@
     ],
     "etymology": "Dal latino 'vacuus' «vuoto».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Stessa radice di 'vacuum', 'vacanza' (tempo vuoto) ed 'evacuare'."
   },
   {
@@ -692,7 +692,7 @@
     ],
     "etymology": "Dal greco 'pródromos' «che corre avanti».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "In medicina la «fase prodromica» è quella dei primi sintomi vaghi, prima che una malattia si manifesti pienamente."
   },
   {
@@ -731,7 +731,7 @@
     "etymology": "Dal provenzale antico 'leujados', da una base che indica «leggerezza».",
     "curiosity": "È parola cara alla lirica: ricorre in Petrarca e in Leopardi.",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "acquiescenza",
@@ -767,7 +767,7 @@
     ],
     "etymology": "Di origine incerta, forse onomatopeica o dal longobardo.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "tergiversare",
@@ -840,7 +840,7 @@
     ],
     "etymology": "Dal latino 'eximius' «scelto, eccezionale», da 'eximere' «togliere fuori (dalla massa)».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Dal latino 'eximius', da 'eximere' «togliere fuori»: l'esimio è letteralmente chi viene tirato fuori dalla massa."
   },
   {
@@ -878,7 +878,7 @@
     ],
     "etymology": "Dal greco 'diaphanḗs' «che traspare», da 'diá' «attraverso» e 'phaínō' «mostro».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Dal greco «che traspare»: dà il nome alla diafania, la proprietà dei corpi di lasciar passare la luce senza essere del tutto trasparenti."
   },
   {
@@ -896,7 +896,7 @@
     ],
     "etymology": "Composto di 'vie' (dal latino 'via', «di molto») e 'più'.",
     "category": "antica",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "esacerbare",
@@ -951,7 +951,7 @@
     ],
     "etymology": "Dal latino 'inveteratus', da 'vetus' «vecchio»: invecchiato dentro.",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Stessa radice di 'veterano' e di 'vetusto': l'abitudine inveterata è quella invecchiata insieme a chi la porta."
   },
   {
@@ -988,7 +988,7 @@
     ],
     "etymology": "Da 's-' privativo e 'pregiudizio'.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "malleabile",
@@ -1025,7 +1025,7 @@
     ],
     "etymology": "Da 'omni-' (tutto) e 'comprensivo'.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "ineffabile",
@@ -1043,7 +1043,7 @@
     ],
     "etymology": "Dal latino 'ineffabilis', da 'effari' «esprimere a parole».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "burbero",
@@ -1115,7 +1115,7 @@
     ],
     "etymology": "Dal latino 'atavus' «antenato lontano».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Nel lessico parentale romano l'«atavus» era un grado preciso: il trisavolo del padre, cinque generazioni indietro."
   },
   {
@@ -1224,7 +1224,7 @@
     ],
     "etymology": "Dalle Sibille, sacerdotesse dell'antichità che pronunciavano oracoli oscuri.",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "I Libri Sibillini, raccolte di oracoli oscuri, venivano consultati dal Senato romano nei momenti di crisi."
   },
   {
@@ -1243,7 +1243,7 @@
     ],
     "etymology": "Dal latino 'impellens', participio di 'impellere' «spingere dentro».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "borioso",
@@ -1261,7 +1261,7 @@
     ],
     "etymology": "Da 'boria', forse dall'arabo 'buhr' «orgoglio».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "adamantino",
@@ -1279,7 +1279,7 @@
     ],
     "etymology": "Dal greco 'adamas' «indomabile», radice di 'diamante'.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "querimonia",
@@ -1297,7 +1297,7 @@
     ],
     "etymology": "Dal latino 'querimonia', da 'queri' «lamentarsi».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "È il termine più antico e più formale della famiglia di 'querulo' e 'querela'."
   },
   {
@@ -1334,7 +1334,7 @@
     ],
     "etymology": "Dal latino 'avulsus', participio di 'avellere' «strappare via».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "pletorico",
@@ -1352,7 +1352,7 @@
     ],
     "etymology": "Dal greco 'plēthōrikós', da 'plēthos' «abbondanza, pienezza».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Nella medicina antica la 'plethora' era un eccesso di sangue nel corpo, che si curava col salasso."
   },
   {
@@ -1371,7 +1371,7 @@
     ],
     "etymology": "Dallo spagnolo 'esmargizar', forse legato allo spavento ('smargiare' = intimorire).",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "consono",
@@ -1389,7 +1389,7 @@
     ],
     "etymology": "Dal latino 'consonus', da 'sonus' «suono»: che suona insieme.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "iattura",
@@ -1407,7 +1407,7 @@
     ],
     "etymology": "Dal latino 'iactura' «perdita», da 'iacere' «gettare».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La 'iactura' era la merce gettata in mare per alleggerire una nave in pericolo. Dalla stessa immagine l'inglese ha ricavato 'jettison'."
   },
   {
@@ -1426,7 +1426,7 @@
     ],
     "etymology": "Dal latino 'impavidus', da 'pavere' «temere».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "'Pavere' è anche la radice dell'italiano 'paura'."
   },
   {
@@ -1445,7 +1445,7 @@
     ],
     "etymology": "Dal latino 'opinabilis', da 'opinari' «avere un'opinione».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "recondito",
@@ -1463,7 +1463,7 @@
     ],
     "etymology": "Dal latino 'reconditus', participio di 'recondere' «riporre, nascondere».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Il 'condere' latino («riporre») sta anche dentro 'nascondere'."
   },
   {
@@ -1500,7 +1500,7 @@
     ],
     "etymology": "Dal latino 'fugax', da 'fugere' «fuggire».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Stessa radice di 'fuga', di 'rifugio' e di 'profugo'."
   },
   {
@@ -1519,7 +1519,7 @@
     ],
     "etymology": "Dal latino 'algidus', da 'algere' «avere freddo».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "In medicina la «fase algida» è lo stadio freddo di certe febbri, quando la temperatura corporea crolla."
   },
   {
@@ -1557,7 +1557,7 @@
     ],
     "etymology": "Da 'in-' privativo e 'prorogabile', dal latino 'prorogare' «prolungare».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "eclettico",
@@ -1594,7 +1594,7 @@
     ],
     "etymology": "Da 'sussiego', atteggiamento di gravità affettata.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "baldanzoso",
@@ -1612,7 +1612,7 @@
     ],
     "etymology": "Da 'baldanza', dal germanico 'bald' «audace».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "esoso",
@@ -1630,7 +1630,7 @@
     ],
     "etymology": "Dal latino 'exosus' «odioso», da 'odisse' «odiare».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "pusillanime",
@@ -1665,7 +1665,7 @@
     ],
     "etymology": "Dal latino 'ubique' «dovunque».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "dissennato",
@@ -1720,7 +1720,7 @@
     ],
     "etymology": "Dal latino 'protervus', forse da 'pro-' e 'terere' «logorare» (senza freni).",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "randagio",
@@ -1756,7 +1756,7 @@
     ],
     "etymology": "Dal latino 'pedisequus', «che segue a piedi», da 'pes' e 'sequi'.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Il 'pedisequus' era il servo che camminava dietro al padrone: nella parola resta l'idea di chi la strada non la sceglie, la segue e basta."
   },
   {
@@ -1775,7 +1775,7 @@
     ],
     "etymology": "Dal latino 'propalare', da 'palam' «apertamente».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "afflato",
@@ -1793,7 +1793,7 @@
     ],
     "etymology": "Dal latino 'afflatus', da 'afflare' «soffiare verso».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "L'ispirazione immaginata come un respiro che arriva da fuori: la stessa immagine sta dentro 'ispirazione' e 'spirito'."
   },
   {
@@ -1831,7 +1831,7 @@
     ],
     "etymology": "Da 'grigio', accrescitivo per intensità.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "imperterrito",
@@ -1868,7 +1868,7 @@
     ],
     "etymology": "Dal latino 'vexare', frequentativo di 'vehere' «scuotere».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "'Vehere' («trasportare») è anche la radice di 'veicolo': vessare è scuotere qualcuno di continuo."
   },
   {
@@ -1887,7 +1887,7 @@
     ],
     "etymology": "Di origine incerta, forse dal longobardo, imparentato con 'arco' (inarcato, teso).",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "fallace",
@@ -1905,7 +1905,7 @@
     ],
     "etymology": "Dal latino 'fallax', da 'fallere' «ingannare».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "impronta",
@@ -1941,7 +1941,7 @@
     ],
     "etymology": "Dal latino 'insipiens', da 'sapere' «avere sapore/senno».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "chimerico",
@@ -1959,7 +1959,7 @@
     ],
     "etymology": "Dalla Chimera, mostro mitologico ibrido e impossibile.",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La Chimera del mito aveva testa di leone, corpo di capra e coda di serpente: fu uccisa da Bellerofonte in groppa a Pegaso."
   },
   {
@@ -1978,7 +1978,7 @@
     ],
     "etymology": "Dal francese 'avaliser', da 'aval' «garanzia» sui titoli di credito.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "manicheo",
@@ -2015,7 +2015,7 @@
     ],
     "etymology": "Dal greco 'sophisma', da 'sophízesthai' «escogitare».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Prende nome dai Sofisti, i maestri di retorica dell'antica Grecia che Platone accusa nei suoi dialoghi di insegnare a far apparire vera qualsiasi tesi."
   },
   {
@@ -2034,7 +2034,7 @@
     ],
     "etymology": "Dal latino 'taeter' «ripugnante, orrido».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "epitome",
@@ -2052,7 +2052,7 @@
     ],
     "etymology": "Dal greco 'epitomḗ' «taglio, riassunto», da 'témnein' «tagliare».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "Il greco 'témnein' («tagliare») è la stessa radice di 'anatomia' e di 'atomo', che significa «non tagliabile»."
   },
   {
@@ -2071,7 +2071,7 @@
     ],
     "etymology": "Da 'arrembaggio', assalto navale con abbordaggio.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "sagoma",
@@ -2107,7 +2107,7 @@
     ],
     "etymology": "Dal latino 'risibilis', da 'ridere'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "abietto",
@@ -2125,7 +2125,7 @@
     ],
     "etymology": "Dal latino 'abiectus', participio di 'abicere' «gettare via».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La radice 'iacere' («gettare») è la stessa di 'progetto', 'soggetto' e 'iattura': tutte cose gettate in qualche direzione."
   },
   {
@@ -2144,7 +2144,7 @@
     ],
     "etymology": "Dal latino 'propugnare', da 'pugnare' «combattere», in difesa di qualcosa.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "vacillare",
@@ -2216,7 +2216,7 @@
     ],
     "etymology": "Dal latino 'profluvium', da 'profluere' «scorrere via».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "smaliziato",
@@ -2234,7 +2234,7 @@
     ],
     "etymology": "Da 's-' e 'malizia', nel senso di privarsi dell'ingenuità.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "abborracciato",
@@ -2252,7 +2252,7 @@
     ],
     "etymology": "Da 'borra', materiale scadente usato per imbottire in fretta.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "diatriba",
@@ -2289,7 +2289,7 @@
     ],
     "etymology": "Dal latino 'immarcescibilis', da 'marcescere' «appassire».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "'Marcire' viene dalla stessa radice: immarcescibile è ciò che non marcisce mai."
   },
   {
@@ -2308,7 +2308,7 @@
     ],
     "etymology": "Da 'boccheggiare', aprire e chiudere la bocca cercando aria.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "increscioso",
@@ -2326,7 +2326,7 @@
     ],
     "etymology": "Da 'in-' e 'crescere' nel senso antico di 'dispiacere' (rincrescere).",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "sperticato",
@@ -2362,7 +2362,7 @@
     ],
     "etymology": "Da 'vana gloria', gloria priva di reale fondamento.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "controvertibile",
@@ -2380,7 +2380,7 @@
     ],
     "etymology": "Dal latino 'controversus', da 'controvertere' «volgere contro».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "sfrontatezza",
@@ -2398,7 +2398,7 @@
     ],
     "etymology": "Da 'sfrontato', da 's-' e 'fronte' (senza vergogna in volto).",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "epigrafico",
@@ -2416,7 +2416,7 @@
     ],
     "etymology": "Da 'epigrafe', dal greco 'epigraphḗ' «iscrizione».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "acredine",
@@ -2434,7 +2434,7 @@
     ],
     "etymology": "Dal latino 'acredo', da 'acer' «acre, pungente».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "Stessa radice di 'acerbo', di 'acuto' e di 'aceto'."
   },
   {
@@ -2471,7 +2471,7 @@
     ],
     "etymology": "Dal latino 'indolens', da 'dolere' «soffrire»: che non sente dolore, insensibile agli stimoli.",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "La medicina usa ancora «indolente» nel senso originario, per una lesione che non fa male."
   },
   {
@@ -2490,7 +2490,7 @@
     ],
     "etymology": "Dal latino 'farrago' «miscuglio di cereali per il bestiame».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "avvedutezza",
@@ -2508,7 +2508,7 @@
     ],
     "etymology": "Da 'avveduto', participio di 'avvedersi' «accorgersi».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "logorroico",
@@ -2526,7 +2526,7 @@
     ],
     "etymology": "Dal greco 'lógos' «parola» e 'rhéō' «scorrere».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 1,
     "curiosity": "Il greco 'rhéō' («scorrere») è la stessa radice di 'diarrea' e di 'catarro'."
   },
   {
@@ -2545,7 +2545,7 @@
     ],
     "etymology": "Dal latino 'subsistere', da 'sistere' «fermarsi, stare».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "inclemente",
@@ -2563,7 +2563,7 @@
     ],
     "etymology": "Dal latino 'inclemens', da 'clemens' «mite».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "vituperare",
@@ -2581,7 +2581,7 @@
     ],
     "etymology": "Dal latino 'vituperare', da 'vitium' «vizio» e 'parare' «preparare».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "pletora",
@@ -2599,7 +2599,7 @@
     ],
     "etymology": "Dal greco 'plēthṓra', da 'plḗthein' «essere pieno».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Nella medicina antica indicava un eccesso di sangue nel corpo, condizione che si curava col salasso."
   },
   {
@@ -2618,7 +2618,7 @@
     ],
     "etymology": "Dal latino 'recalcitrare', da 'calx' «calcagno»: tirare calci indietro.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "inappagato",
@@ -2636,7 +2636,7 @@
     ],
     "etymology": "Da 'in-' privativo e 'appagare', dal latino 'ad' e 'pax' «pace».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "millanteria",
@@ -2654,7 +2654,7 @@
     ],
     "etymology": "Da 'millantare', vantare falsamente.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "esimente",
@@ -2672,7 +2672,7 @@
     ],
     "etymology": "Dal latino 'eximens', participio di 'eximere' «togliere fuori».",
     "category": "comune",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "vezzeggiativo",
@@ -2690,7 +2690,7 @@
     ],
     "etymology": "Da 'vezzo', dal latino 'vitium' nel senso di abitudine gradevole.",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "In grammatica italiana è una categoria vera e propria: sono vezzeggiativi i suffissi che addolciscono, come in «Marco → Marchino»."
   },
   {
@@ -2709,7 +2709,7 @@
     ],
     "etymology": "Dal latino 'sacralis', da 'sacer' «sacro».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "iperbole",
@@ -2745,7 +2745,7 @@
     ],
     "etymology": "Dal greco 'a-' privativo e 'sēptikós' «putrefattivo», col significato medico di «sterile».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Il greco 'sêpsis' è la putrefazione: stessa radice di 'setticemia' e di 'antisettico'."
   },
   {
@@ -2764,7 +2764,7 @@
     ],
     "etymology": "Dal latino 'sinuosus', da 'sinus' «piega, curva».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Dallo stesso 'sinus' vengono il «seno» dell'anatomia e il «seno» della trigonometria: quest'ultimo per una traduzione sbagliata dall'arabo."
   },
   {
@@ -2783,7 +2783,7 @@
     ],
     "etymology": "Dal latino 'subsidiarius', da 'subsidium' «riserva, aiuto».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "disquisizione",
@@ -2820,7 +2820,7 @@
     ],
     "etymology": "Dal greco 'enkṓmion', da 'en' «in» e 'kômos' «corteo festivo».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 3,
     "curiosity": "Il 'kômos' greco era il corteo festivo in onore di Dioniso: l'encomio era il canto che si intonava sfilando."
   },
   {
@@ -2857,7 +2857,7 @@
     ],
     "etymology": "Da 'vacuo', dal latino 'vacuus' «vuoto».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "postulare",
@@ -2875,7 +2875,7 @@
     ],
     "etymology": "Dal latino 'postulare' «chiedere, esigere».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "In matematica un «postulato» è esattamente questo: qualcosa che si chiede di concedere senza dimostrarlo."
   },
   {
@@ -2894,7 +2894,7 @@
     ],
     "etymology": "Dal latino tardo 'impostura', da 'imponere' «imporre, ingannare».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "'Imponere' è «mettere sopra»: la stessa origine dell'imposta, la tassa che viene posta addosso."
   },
   {
@@ -2931,7 +2931,7 @@
     ],
     "etymology": "Da 'gretto', forse dal latino 'grex' «gregge» nel senso di volgare.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "pervicace",
@@ -2949,7 +2949,7 @@
     ],
     "etymology": "Dal latino 'pervicax', da 'pervincere' «vincere fino in fondo».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "declamare",
@@ -2967,7 +2967,7 @@
     ],
     "etymology": "Dal latino 'declamare', da 'clamare' «gridare».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "provvido",
@@ -2985,7 +2985,7 @@
     ],
     "etymology": "Dal latino 'providus', da 'providere' «provvedere in anticipo».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "malcelato",
@@ -3003,7 +3003,7 @@
     ],
     "etymology": "Da 'mal-' e 'celato', participio di 'celare'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "esalare",
@@ -3021,7 +3021,7 @@
     ],
     "etymology": "Dal latino 'exhalare', da 'halare' «respirare».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "'Halare' è anche la radice di 'alito'."
   },
   {
@@ -3040,7 +3040,7 @@
     ],
     "etymology": "Da 'riotta', antica forma di 'rissa, tumulto'.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "esausto",
@@ -3077,7 +3077,7 @@
     ],
     "etymology": "Dal latino 'aulicus', da 'aula' «corte regale».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "L'aula latina era la corte del sovrano: la stessa parola oggi indica un'aula scolastica."
   },
   {
@@ -3133,7 +3133,7 @@
     ],
     "etymology": "Da 'postilla', dal latino medievale 'post illa (verba)' «dopo quelle parole».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "ottuso",
@@ -3188,7 +3188,7 @@
     ],
     "etymology": "Dal latino 'abhorrere', da 'horrere' «rabbrividire».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "accorato",
@@ -3206,7 +3206,7 @@
     ],
     "etymology": "Da 'accorare', da 'a-' e 'cuore' (colpire al cuore).",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "affabulazione",
@@ -3241,7 +3241,7 @@
     ],
     "etymology": "Dal latino 'alacer' «vivace, pronto».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Dalla stessa parola latina l'inglese ha preso 'alacrity'."
   },
   {
@@ -3314,7 +3314,7 @@
     ],
     "etymology": "Dal latino 'anhelare' «respirare affannosamente».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "arguzia",
@@ -3332,7 +3332,7 @@
     ],
     "etymology": "Dal latino 'argutia', da 'arguere' «rendere chiaro».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Stessa radice di 'argomento': in origine l'idea non è la battuta, ma il rendere chiaro."
   },
   {
@@ -3369,7 +3369,7 @@
     ],
     "etymology": "Da 'avvenire' nel senso antico di «presentarsi bene».",
     "category": "letteraria",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "balzano",
@@ -3387,7 +3387,7 @@
     ],
     "etymology": "Da 'balzo', forse riferito a un modo di muoversi irregolare.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "beffardo",
@@ -3441,7 +3441,7 @@
     ],
     "etymology": "Da 'cangiare', forma antica di 'cambiare'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "capzioso",
@@ -3459,7 +3459,7 @@
     ],
     "etymology": "Dal latino 'captiosus', da 'capere' «prendere, catturare».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "cesellato",
@@ -3495,7 +3495,7 @@
     ],
     "etymology": "Di origine onomatopeica, imparentata con 'ciancia'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "coevo",
@@ -3512,7 +3512,7 @@
     ],
     "etymology": "Dal latino 'coaevus', da 'co-' e 'aevum' «età».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 4,
     "curiosity": "Stessa radice di 'evo' e di 'medioevo'."
   },
   {
@@ -3531,7 +3531,7 @@
     ],
     "etymology": "Dal latino 'cogens', participio di 'cogere' «costringere».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "'Cogere' è contratto da 'co-agere', «spingere insieme»: stessa radice di 'coatto' e di 'coazione'."
   },
   {
@@ -3549,7 +3549,7 @@
     ],
     "etymology": "Dal latino 'commiserari', da 'miser' «infelice».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "conclamato",
@@ -3585,7 +3585,7 @@
     ],
     "etymology": "Dal latino 'contumax', da 'contumacia' «ostinazione, ribellione».",
     "category": "comune",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "convulso",
@@ -3603,7 +3603,7 @@
     ],
     "etymology": "Dal latino 'convulsus', participio di 'convellere' «strappare, scuotere».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "corrusco",
@@ -3621,7 +3621,7 @@
     ],
     "etymology": "Dal latino 'corruscus' «tremolante, scintillante».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "credenziale",
@@ -3675,7 +3675,7 @@
     ],
     "etymology": "Dal latino 'deferre' «portare, rimettersi al giudizio altrui».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "demagogico",
@@ -3711,7 +3711,7 @@
     ],
     "etymology": "Dal latino 'desuetus', da 'desuescere' «disabituarsi».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La radice 'suescere' («abituarsi») è la stessa di 'consuetudine', 'assuefazione' e 'costume'."
   },
   {
@@ -3730,7 +3730,7 @@
     ],
     "etymology": "Dal latino 'dis-' e 'forma'.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "dirompente",
@@ -3785,7 +3785,7 @@
     ],
     "etymology": "Dal latino 'dissertare', frequentativo di 'disserere' «esporre in ordine».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "discrasia",
@@ -3803,7 +3803,7 @@
     ],
     "etymology": "Dal greco 'dyskrasía', da 'dys-' e 'krâsis' «mescolanza».",
     "category": "comune",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "Nella medicina ippocratica la salute era 'eucrasia', il buon mescolarsi degli umori, e la malattia 'dyscrasia', il loro squilibrio."
   },
   {
@@ -3822,7 +3822,7 @@
     ],
     "etymology": "Da 'dis-' e 'sodo', terreno compatto.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "ditirambico",
@@ -3840,7 +3840,7 @@
     ],
     "etymology": "Dal 'ditirambo', antico canto greco in onore di Dioniso.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "ecumenico",
@@ -3858,7 +3858,7 @@
     ],
     "etymology": "Dal greco 'oikoumenikós', da 'oikouménē' «terra abitata».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La radice 'oikos' («casa») è la stessa di 'economia' e di 'ecologia'."
   },
   {
@@ -3875,7 +3875,7 @@
     ],
     "etymology": "Dal greco 'hēdonḗ' «piacere».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "La ricerca del piacere come fine era già al centro della scuola cirenaica di Aristippo, nel IV secolo a.C."
   },
   {
@@ -3894,7 +3894,7 @@
     ],
     "etymology": "Dal latino 'effluvium', da 'effluere' «scorrere fuori».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "elucubrazione",
@@ -3912,7 +3912,7 @@
     ],
     "etymology": "Dal latino 'elucubrare' «lavorare a lume di lucerna».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "emulo",
@@ -3930,7 +3930,7 @@
     ],
     "etymology": "Dal latino 'aemulus' «che gareggia».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "enfatico",
@@ -3966,7 +3966,7 @@
     ],
     "etymology": "Dal latino 'aequanimis', da 'aequus' «uguale» e 'animus' «animo».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 3,
     "curiosity": "Stessa radice di 'equatore' e di 'adeguato'."
   },
   {
@@ -4004,7 +4004,7 @@
     ],
     "etymology": "Dal latino 'fatuus' «sciocco, insipido».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "È lo stesso aggettivo del «fuoco fatuo», la fiammella che appare sulle paludi e svanisce appena ti avvicini."
   },
   {
@@ -4023,7 +4023,7 @@
     ],
     "etymology": "Dal latino 'feralis', da 'ferus' o legato ai riti funebri romani (feralia).",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "fideistico",
@@ -4040,7 +4040,7 @@
     ],
     "etymology": "Dal latino 'fides' «fede».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "fittizio",
@@ -4188,7 +4188,7 @@
     ],
     "etymology": "Dal latino 'gaudens', participio di 'gaudere' «godere».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 3,
     "curiosity": "Nel Duecento i Frati Gaudenti erano un ordine cavalleresco realmente esistito: Dante ne mette due all'Inferno, tra gli ipocriti."
   },
   {
@@ -4206,7 +4206,7 @@
     ],
     "etymology": "Dal latino 'genu' «ginocchio» e 'flectere' «piegare».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "giulivo",
@@ -4260,7 +4260,7 @@
     ],
     "etymology": "Da 'guazzo', pozza d'acqua, con senso di mescolanza fangosa.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "iattanza",
@@ -4278,7 +4278,7 @@
     ],
     "etymology": "Dal latino 'iactantia', da 'iactare' «vantarsi».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "idoneita",
@@ -4313,7 +4313,7 @@
     ],
     "etymology": "Da 'languido', dal latino 'languere' «essere fiacco».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "imbelle",
@@ -4331,7 +4331,7 @@
     ],
     "etymology": "Dal latino 'imbellis', da 'bellum' «guerra».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Non ha nulla a che vedere con 'bello': dentro c'è 'bellum', «guerra», la stessa radice di 'bellico'."
   },
   {
@@ -4350,7 +4350,7 @@
     ],
     "etymology": "Da 'imbevere', dal latino 'bibere' «bere».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "immanente",
@@ -4368,7 +4368,7 @@
     ],
     "etymology": "Dal latino 'immanens', da 'manere' «restare dentro».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "In filosofia è il contrario esatto di 'trascendente': ciò che sta dentro la realtà invece che oltre."
   },
   {
@@ -4406,7 +4406,7 @@
     ],
     "etymology": "Dal latino 'improbus' «smisurato, eccessivo».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Sopravvive quasi solo nella formula «fatica improba»: dentro c'è 'probus', «onesto», negato."
   },
   {
@@ -4425,7 +4425,7 @@
     ],
     "etymology": "Dal latino 'inanis' «vuoto».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "incalzante",
@@ -4481,7 +4481,7 @@
     ],
     "etymology": "Dal latino 'indefessus', da 'fessus' «stanco».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "indole",
@@ -4499,7 +4499,7 @@
     ],
     "etymology": "Dal latino 'indoles', da 'indu-' (dentro) e 'olescere' «crescere».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "inebriante",
@@ -4535,7 +4535,7 @@
     ],
     "etymology": "Dal latino 'in-' e 'exhaustus' «esaurito».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "infingardo",
@@ -4553,7 +4553,7 @@
     ],
     "etymology": "Da 'infingersi' «fingere», nel senso di simulare impegno.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "ingente",
@@ -4626,7 +4626,7 @@
     ],
     "etymology": "Dal latino 'insulsus', da 'sal' «sale»: senza sale, senza spirito.",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Il quasi sinonimo 'insipido' arriva invece da 'sapor': due modi diversi di dire la stessa mancanza di gusto."
   },
   {
@@ -4645,7 +4645,7 @@
     ],
     "etymology": "Dal latino 'intemeratus', da 'temerare' «contaminare».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "intempestivo",
@@ -4682,7 +4682,7 @@
     ],
     "etymology": "Dal latino 'interloqui' «parlare durante», intervenire senza concludere.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "intransitabile",
@@ -4753,7 +4753,7 @@
     ],
     "etymology": "Dal latino 'iris, iridis' «arcobaleno».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Iride era la dea greca dell'arcobaleno e messaggera degli dèi: dal suo nome vengono sia l'iride dell'occhio sia questo aggettivo."
   },
   {
@@ -4772,7 +4772,7 @@
     ],
     "etymology": "Dal latino 'labilis', da 'labi' «scivolare».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Stessa radice del 'lapsus', lo scivolone della lingua o della memoria."
   },
   {
@@ -4791,7 +4791,7 @@
     ],
     "etymology": "Da 'lambicco', alambicco, per il senso di distillazione eccessiva del pensiero.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "L'alambicco, lo strumento del distillatore, arriva a noi dall'arabo 'al-anbiq'."
   },
   {
@@ -4847,7 +4847,7 @@
     ],
     "etymology": "Dal latino 'lenire', da 'lenis' «dolce, mite».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "letargico",
@@ -4884,7 +4884,7 @@
     ],
     "etymology": "Da 'lezio', vezzo affettato, forse dal francese antico.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "limpidezza",
@@ -4920,7 +4920,7 @@
     ],
     "etymology": "Dal latino 'livor' «colore livido», per estensione «invidia».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Il 'livor' latino era il bluastro di un livido: l'invidia immaginata come un ematoma dell'animo."
   },
   {
@@ -4939,7 +4939,7 @@
     ],
     "etymology": "Dal latino 'lugubris', da 'lugere' «piangere, essere in lutto».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "'Lugere' era piangere i morti: la parola è imparentata con 'lutto'."
   },
   {
@@ -4976,7 +4976,7 @@
     ],
     "etymology": "Da 'mal-' e 'augurato', dal latino 'augurium' «presagio».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "manifesto",
@@ -5031,7 +5031,7 @@
     ],
     "etymology": "Dal latino 'maestus' «afflitto».",
     "category": "letteraria",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "mieloso",
@@ -5049,7 +5049,7 @@
     ],
     "etymology": "Da 'miele', per analogia con la dolcezza eccessiva.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "mordace",
@@ -5086,7 +5086,7 @@
     ],
     "etymology": "Dal latino 'nefandus', da 'ne-' e 'fari' «dire»: che non si può dire.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Letteralmente «che non si può dire» (ne + fari): la stessa radice 'fari' («parlare») è in 'favola', 'fato' e 'infante', chi non parla ancora."
   },
   {
@@ -5105,7 +5105,7 @@
     ],
     "etymology": "Dal latino 'neglectus', participio di 'negligere' «trascurare».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "'Negligere' è 'nec legere', «non raccogliere»: la stessa radice di 'leggere', 'collezione' ed 'eleggere'."
   },
   {
@@ -5198,7 +5198,7 @@
     ],
     "etymology": "Da 'ombra', per il senso di sospetto verso ciò che si nasconde.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "id": "opimo",
@@ -5216,7 +5216,7 @@
     ],
     "etymology": "Dal latino 'opimus' «grasso, fertile».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "oscillante",
@@ -5252,7 +5252,7 @@
     ],
     "etymology": "Da 'ossequio', dal latino 'obsequium' «compiacenza».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 3,
     "curiosity": "Dentro c'è 'sequi', «seguire»: l'ossequio è un andare dietro a qualcuno."
   },
   {
@@ -5309,7 +5309,7 @@
     ],
     "etymology": "Da 'paludamento', mantello militare romano indossato dai generali.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "parossismo",
@@ -5364,7 +5364,7 @@
     ],
     "etymology": "Dal latino 'periculosus', da 'periculum' «pericolo».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "perizia",
@@ -5382,7 +5382,7 @@
     ],
     "etymology": "Dal latino 'peritia', da 'peritus' «esperto».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Stessa radice di 'esperienza' e di 'esperimento': la perizia è ciò che si impara provando."
   },
   {
@@ -5401,7 +5401,7 @@
     ],
     "etymology": "Da 'piacere', accrescitivo con valore dispregiativo.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "piatire",
@@ -5419,7 +5419,7 @@
     ],
     "etymology": "Dal francese antico 'plaidier', discutere una causa.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "pigrizia",
@@ -5456,7 +5456,7 @@
     ],
     "etymology": "Dal latino 'pinguis' «grasso».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "posato",
@@ -5474,7 +5474,7 @@
     ],
     "etymology": "Da 'posare', dal latino 'pausare' «fermarsi».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "precipuo",
@@ -5492,7 +5492,7 @@
     ],
     "etymology": "Dal latino 'praecipuus', da 'prae-' e 'capere' «prendere prima».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "prezioso",
@@ -5529,7 +5529,7 @@
     ],
     "etymology": "Dal latino 'probitas', da 'probus' «onesto».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "Stessa radice di 'provare' e di 'approvare', ed esatto contrario di 'improbo'."
   },
   {
@@ -5548,7 +5548,7 @@
     ],
     "etymology": "Dal latino 'profanus', da 'pro' e 'fanum' «tempio»: fuori dal tempio.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "prolisso",
@@ -5621,7 +5621,7 @@
     ],
     "etymology": "Dal latino 'protractus', participio di 'protrahere' «tirare avanti».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "putrescente",
@@ -5639,7 +5639,7 @@
     ],
     "etymology": "Dal latino 'putrescere', da 'putris' «marcio».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "querulo",
@@ -5657,7 +5657,7 @@
     ],
     "etymology": "Dal latino 'querulus', da 'queri' «lamentarsi».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "Stessa radice della 'querela', la lamentela portata davanti a un giudice."
   },
   {
@@ -5676,7 +5676,7 @@
     ],
     "etymology": "Da 'fazzone', probabile alterazione dialettale legata a 'confezionare male'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "ragguardevole",
@@ -5694,7 +5694,7 @@
     ],
     "etymology": "Da 'ragguardare', antica forma di 'riguardare con attenzione'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "rancido",
@@ -5730,7 +5730,7 @@
     ],
     "etymology": "Dal latino 'recisus', participio di 'recidere' «tagliare via».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "La radice 'caedere' («tagliare») è la stessa di 'deciso', 'inciso' e 'preciso', che è letteralmente «tagliato davanti»."
   },
   {
@@ -5806,7 +5806,7 @@
     ],
     "etymology": "Dal latino 'remissivus', da 'remittere' «rimettere, cedere».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "reprobo",
@@ -5824,7 +5824,7 @@
     ],
     "etymology": "Dal latino 'reprobus', da 'reprobare' «disapprovare».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "È il contrario esatto di 'approvare': il reprobo è chi è stato provato e respinto."
   },
   {
@@ -5862,7 +5862,7 @@
     ],
     "etymology": "Dal latino 'restare' «restare fermo».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "riverente",
@@ -5880,7 +5880,7 @@
     ],
     "etymology": "Dal latino 'reverens', da 'revereri' «rispettare profondamente».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "'Vereri' era il timore rispettoso: stessa radice di 'reverenza' e di 'verecondia', il pudore."
   },
   {
@@ -5936,7 +5936,7 @@
     ],
     "etymology": "Dal latino 'salvificus', da 'salvus' «salvo» e 'facere' «fare».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "sancire",
@@ -5954,7 +5954,7 @@
     ],
     "etymology": "Dal latino 'sancire' «rendere sacro e inviolabile».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Dalla stessa radice vengono 'santo' e 'sanzione': sancire era rendere una cosa sacra e quindi intoccabile."
   },
   {
@@ -6101,7 +6101,7 @@
     ],
     "etymology": "Dal latino 'seditiosus', da 'seditio' «rivolta».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "'Seditio' è composto di 'sed-' («a parte») e 'itio' («andata»): la sedizione è un andarsene per conto proprio."
   },
   {
@@ -6156,7 +6156,7 @@
     ],
     "etymology": "Da 'sgomentare', dal latino 'ex-' e 'mens' «mente»: perdere la mente.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "sibarita",
@@ -6173,7 +6173,7 @@
     ],
     "etymology": "Dagli abitanti di Sibari, città della Magna Grecia nota per il lusso.",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 4
   },
   {
     "id": "simulacro",
@@ -6191,7 +6191,7 @@
     ],
     "etymology": "Dal latino 'simulacrum', da 'simulare' «imitare».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "smodato",
@@ -6209,7 +6209,7 @@
     ],
     "etymology": "Da 's-' e 'modo', dal latino 'modus' «misura».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "solerte",
@@ -6227,7 +6227,7 @@
     ],
     "etymology": "Dal latino 'sollers' «abile, industrioso».",
     "category": "comune",
-    "difficulty": 2,
+    "difficulty": 3,
     "curiosity": "'Sollers' è composto di 'sollus' («intero») e 'ars': abile in ogni arte."
   },
   {
@@ -6264,7 +6264,7 @@
     ],
     "etymology": "Dal latino 'sopitus', participio di 'sopire' «assopire».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "sordido",
@@ -6282,7 +6282,7 @@
     ],
     "etymology": "Dal latino 'sordidus', da 'sordes' «sporcizia».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "sortilegio",
@@ -6318,7 +6318,7 @@
     ],
     "etymology": "Da 'sotto-' e 'taciuto', participio di 'tacere'.",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "spartano",
@@ -6373,7 +6373,7 @@
     ],
     "etymology": "Da 's-' e 'temperare', dal latino 'temperare' «mescolare, regolare».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "'Temperare' è mescolare nella giusta proporzione: la stessa radice di 'temperatura', 'temperamento' e perfino del 'temperino'."
   },
   {
@@ -6392,7 +6392,7 @@
     ],
     "etymology": "Da Stentore, araldo omerico dalla voce potentissima come cinquanta uomini.",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 4,
     "curiosity": "Stentore è l'araldo dell'Iliade la cui voce, dice Omero, era potente come quella di cinquanta uomini insieme."
   },
   {
@@ -6430,7 +6430,7 @@
     ],
     "etymology": "Dal latino 'strenuus' «energico, valoroso».",
     "category": "letteraria",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "stringente",
@@ -6448,7 +6448,7 @@
     ],
     "etymology": "Da 'stringere', dal latino 'stringere' «serrare».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "Stessa radice di 'costringere' e di 'distretto'."
   },
   {
@@ -6505,7 +6505,7 @@
     ],
     "etymology": "Da 'zolfo', associato tradizionalmente all'inferno.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "superbia",
@@ -6542,7 +6542,7 @@
     ],
     "etymology": "Dal latino 'supinus' «rovesciato all'indietro».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 3
   },
   {
     "id": "suscettibile",
@@ -6616,7 +6616,7 @@
     ],
     "etymology": "Da 'tedio', dal latino 'taedium' «noia».",
     "category": "comune",
-    "difficulty": 1,
+    "difficulty": 2,
     "curiosity": "I latini avevano la formula 'taedium vitae' per la stanchezza di vivere."
   },
   {
@@ -6635,7 +6635,7 @@
     ],
     "etymology": "Dal latino 'temperantia', da 'temperare' «regolare».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "tenebroso",
@@ -6671,7 +6671,7 @@
     ],
     "etymology": "Da 'tetro', dal latino 'taeter'.",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "timorato",
@@ -6689,7 +6689,7 @@
     ],
     "etymology": "Da 'timore', dal latino 'timor'.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "titubante",
@@ -6725,7 +6725,7 @@
     ],
     "etymology": "Dal latino 'torvus' «feroce, minaccioso».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "trasognato",
@@ -6761,7 +6761,7 @@
     ],
     "etymology": "Dal latino 'tremebundus', da 'tremere' «tremare».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 5
   },
   {
     "id": "truce",
@@ -6815,7 +6815,7 @@
     ],
     "etymology": "Dal latino 'ubertosus', da 'uber' «fertile, abbondante».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "Il latino 'uber' significava sia «fertile» sia «mammella»: l'abbondanza immaginata come qualcosa che nutre."
   },
   {
@@ -6834,7 +6834,7 @@
     ],
     "etymology": "Dal latino 'umbratilis', da 'umbra' «ombra».",
     "category": "letteraria",
-    "difficulty": 3,
+    "difficulty": 5,
     "curiosity": "Stessa radice di 'ombrello', che in latino era una piccola ombra portatile."
   },
   {
@@ -6853,7 +6853,7 @@
     ],
     "etymology": "Dal latino 'usurpare', da 'usus' «uso» e 'rapere' «afferrare».",
     "category": "comune",
-    "difficulty": 2
+    "difficulty": 1
   },
   {
     "id": "vagheggiare",
@@ -6871,7 +6871,7 @@
     ],
     "etymology": "Da 'vago' nel senso antico di «bello, desiderabile».",
     "category": "letteraria",
-    "difficulty": 2,
+    "difficulty": 4,
     "curiosity": "Dentro c'è 'vago' nel senso antico di «bello, desiderabile», non in quello di «impreciso»: un falso amico dentro la nostra stessa lingua."
   },
   {
@@ -6965,7 +6965,7 @@
     ],
     "etymology": "Dal latino 'vetustus', da 'vetus' «vecchio».",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "vezzo",
@@ -6983,7 +6983,7 @@
     ],
     "etymology": "Dal latino 'vitium' «vizio», con evoluzione verso un senso più lieve.",
     "category": "comune",
-    "difficulty": 1
+    "difficulty": 2
   },
   {
     "id": "vigoroso",
@@ -7038,7 +7038,7 @@
     ],
     "etymology": "Dal latino 'vituperium', da 'vitium' «vizio» e 'parare' «preparare».",
     "category": "letteraria",
-    "difficulty": 3
+    "difficulty": 4
   },
   {
     "id": "voluttuoso",
