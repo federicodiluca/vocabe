@@ -4,7 +4,7 @@ Una parola italiana al giorno: significato, esempi, etimologia. Il giorno dopo u
 
 **[federicodiluca.github.io/vocabe](https://federicodiluca.github.io/vocabe/)**
 
-Ripetizione spaziata per il ripasso, glossario di 626 parole e raccolte tematiche da
+Ripetizione spaziata per il ripasso, glossario di 1027 parole e raccolte tematiche da
 completare. Web app (PWA), funziona offline. Nessun account: i progressi stanno in
 `localStorage`, esportabili come file JSON dalle impostazioni.
 
@@ -29,7 +29,7 @@ src/
   state/      store esterno + persistenza
   features/   daily · recall · explore · progress · settings · challenge · recap
   ui/         componenti condivisi (Logo, Icon, Button, Card, Sheet)
-  data/       words.json (626 voci) + collections.json (8 raccolte)
+  data/       words.json (1027 voci) + collections.json (8 raccolte)
 scripts/
   build-seo.mjs    genera dopo la build /parole/<slug>/, glossario, sitemap.xml
   build-icons.mjs  rigenera le icone da icon-source.svg (npm run icons:build)
