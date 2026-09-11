@@ -11,6 +11,8 @@ import { cn } from '@/ui/cn'
 import { WordDetails } from '@/features/daily/WordDetails'
 import { ChallengeSheet } from '@/features/challenge/ChallengeSheet'
 import { RecapSheet } from '@/features/recap/RecapSheet'
+import { MilestoneSheet } from './MilestoneSheet'
+import type { Badge } from '@/core/badges/badges'
 import { Heatmap } from './Heatmap'
 
 function Stat({ value, label }: { value: string | number; label: string }) {
@@ -28,6 +30,7 @@ export function ProgressPage() {
   const [open, setOpen] = useState<string | null>(null)
   const [challengeOpen, setChallengeOpen] = useState(false)
   const [recapOpen, setRecapOpen] = useState(false)
+  const [milestone, setMilestone] = useState<Badge | null>(null)
 
   const thisWeek = useMemo(() => weekStart(localDateKey()), [])
   const week = useMemo(() => buildRecap(state, thisWeek), [state, thisWeek])
@@ -97,11 +100,13 @@ export function ProgressPage() {
           {BADGES.map((b) => {
             const has = earned.has(b.id)
             return (
-              <div
+              <button
                 key={b.id}
+                disabled={!has}
+                onClick={() => setMilestone(b)}
                 className={cn(
-                  'rounded-2xl border p-3 text-sm',
-                  has ? 'border-brand bg-brand-soft' : 'border-line opacity-60',
+                  'rounded-2xl border p-3 text-left text-sm transition',
+                  has ? 'border-brand bg-brand-soft hover:bg-brand-soft/70' : 'border-line opacity-60',
                 )}
               >
                 <div className="flex items-center gap-1.5 font-semibold">
@@ -109,7 +114,12 @@ export function ProgressPage() {
                   {b.name}
                 </div>
                 <div className="text-xs text-ink-soft">{b.hint}</div>
-              </div>
+                {has && (
+                  <div className="mt-1.5 flex items-center gap-1 text-xs text-brand">
+                    <Icon name="share" size={12} /> condividi
+                  </div>
+                )}
+              </button>
             )
           })}
         </div>
@@ -160,6 +170,7 @@ export function ProgressPage() {
 
       <ChallengeSheet open={challengeOpen} onClose={() => setChallengeOpen(false)} />
       <RecapSheet open={recapOpen} from={thisWeek} onClose={() => setRecapOpen(false)} />
+      <MilestoneSheet badge={milestone} open={milestone !== null} onClose={() => setMilestone(null)} />
     </div>
   )
 }

@@ -1,9 +1,24 @@
 import type { Word } from '@/core/types'
 import { siteUrl } from '@/core/site'
+import { levelLabel } from '@/core/content/levels'
+
+/**
+ * The small line above the term on the share card. Today's word says so; any
+ * other word is introduced by its rarity, which is the more interesting hook.
+ */
+export function shareKicker(word: Word, daily: boolean): string {
+  if (daily) return 'parola del giorno'
+  if (word.difficulty && word.difficulty >= 3) return `parola ${levelLabel(word.difficulty).toLowerCase()}`
+  return 'dal glossario di Vocabe'
+}
 
 /** Short shareable text — the meaning stays in the image, not here. */
-export function shareText(word: Word): string {
-  return `«${word.term}» — la parola di oggi su Vocabe.\n${siteUrl()}`
+export function shareText(word: Word, daily: boolean): string {
+  const what =
+    daily ? 'la parola di oggi su Vocabe'
+    : word.difficulty && word.difficulty >= 3 ? `una ${shareKicker(word, false)} su Vocabe`
+    : 'una parola da Vocabe'
+  return `«${word.term}» — ${what}.\n${siteUrl()}`
 }
 
 export type ImageShareResult = 'shared' | 'unsupported' | 'cancelled' | 'failed'

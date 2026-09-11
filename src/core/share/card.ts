@@ -1,6 +1,8 @@
 import type { ProgressState, Word } from '@/core/types'
+import type { Badge } from '@/core/badges/badges'
 import { displayStreak } from '@/core/streak/streak'
 import { SITE_LABEL } from '@/core/site'
+import { shareKicker } from './share'
 
 /** Share image size — Instagram feed portrait (4:5). */
 const W = 1080
@@ -66,7 +68,10 @@ function fitLine(ctx: CanvasRenderingContext2D, text: string, max: number, start
   return size
 }
 
-export async function renderShareCard(word: Word, state: ProgressState): Promise<Blob> {
+const PAD = 96
+
+/** Paper, frame, the mark + wordmark and a kicker on the right. Shared by every card. */
+async function openCard(kicker: string): Promise<{ canvas: HTMLCanvasElement; ctx: CanvasRenderingContext2D }> {
   if ('fonts' in document) {
     try {
       await (document as Document & { fonts: FontFaceSet }).fonts.ready
@@ -79,7 +84,7 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
   canvas.width = W
   canvas.height = H
   const ctx = canvas.getContext('2d')!
-  const pad = 96
+  const pad = PAD
 
   ctx.fillStyle = COLORS.paper
   ctx.fillRect(0, 0, W, H)
@@ -105,8 +110,48 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
   ctx.fillStyle = COLORS.soft
   ctx.font = `500 28px ${SANS}`
   ctx.textAlign = 'right'
-  ctx.fillText('parola del giorno', W - pad, 132)
+  ctx.fillText(kicker, W - pad, 132)
   ctx.textAlign = 'left'
+
+  return { canvas, ctx }
+}
+
+/** Site line bottom-left and a stat bottom-right, then the PNG. */
+function closeCard(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, tag: string): Promise<Blob> {
+  const pad = PAD
+  ctx.textAlign = 'left'
+  ctx.fillStyle = COLORS.ink
+  ctx.font = `700 32px ${SANS}`
+  ctx.fillText('Vocabe', pad, H - 116)
+  ctx.fillStyle = COLORS.soft
+  ctx.font = `500 24px ${SANS}`
+  ctx.fillText(SITE_LABEL, pad, H - 82)
+
+  ctx.fillStyle = COLORS.soft
+  ctx.font = `500 28px ${SANS}`
+  ctx.textAlign = 'right'
+  ctx.fillText(tag, W - pad, H - 100)
+  ctx.textAlign = 'left'
+
+  return new Promise<Blob>((resolve, reject) =>
+    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'),
+  )
+}
+
+/** The reader's one-line stat for the footer: the streak if alive, else the tally. */
+function statTag(state: ProgressState): string {
+  const streak = displayStreak(state.streak)
+  const learned = Object.keys(state.learned).length
+  return streak > 0 ? `serie di ${streak} giorni` : `${learned} parole imparate`
+}
+
+export async function renderShareCard(
+  word: Word,
+  state: ProgressState,
+  { daily = false }: { daily?: boolean } = {},
+): Promise<Blob> {
+  const { canvas, ctx } = await openCard(shareKicker(word, daily))
+  const pad = PAD
 
   // term
   let y = 360
@@ -158,26 +203,43 @@ export async function renderShareCard(word: Word, state: ProgressState): Promise
     ctx.stroke()
   }
 
-  // footer
-  const streak = displayStreak(state.streak)
-  const learned = Object.keys(state.learned).length
+  return closeCard(canvas, ctx, statTag(state))
+}
+
+/**
+ * A milestone card: the badge's figure very large in the middle, its name and
+ * hint beneath. Same paper and chrome as the word card, so they sit together in
+ * a feed.
+ */
+export async function renderMilestoneCard(badge: Badge, state: ProgressState): Promise<Blob> {
+  const { canvas, ctx } = await openCard('traguardo raggiunto')
+  const pad = PAD
+  const figure = badge.figure ?? { value: '✓', label: badge.name }
+
+  ctx.textAlign = 'center'
+  ctx.fillStyle = COLORS.brand
+  const size = fitLine(ctx, figure.value, W - pad * 2, 260, 120)
+  ctx.font = `700 ${size}px ${SERIF}`
+  ctx.fillText(figure.value, W / 2, 600)
+
   ctx.fillStyle = COLORS.ink
-  ctx.font = `700 32px ${SANS}`
-  ctx.fillText('Vocabe', pad, H - 116)
-  ctx.fillStyle = COLORS.soft
-  ctx.font = `500 24px ${SANS}`
-  ctx.fillText(SITE_LABEL, pad, H - 82)
+  ctx.font = `400 48px ${SANS}`
+  ctx.fillText(figure.label, W / 2, 720)
 
-  ctx.fillStyle = COLORS.soft
-  ctx.font = `500 28px ${SANS}`
-  ctx.textAlign = 'right'
-  const tag = streak > 0 ? `serie di ${streak} giorni` : `${learned} parole imparate`
-  ctx.fillText(tag, W - pad, H - 100)
-  ctx.textAlign = 'left'
+  // rule
+  ctx.strokeStyle = COLORS.brand
+  ctx.lineWidth = 4
+  ctx.beginPath()
+  ctx.moveTo(W / 2 - 48, 790)
+  ctx.lineTo(W / 2 + 48, 790)
+  ctx.stroke()
 
-  return await new Promise<Blob>((resolve, reject) =>
-    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('toBlob failed'))), 'image/png'),
-  )
+  // The badge name alone: its hint would only restate the figure.
+  ctx.fillStyle = COLORS.ink
+  ctx.font = `700 60px ${SERIF}`
+  ctx.fillText(badge.name, W / 2, 890)
+
+  return closeCard(canvas, ctx, statTag(state))
 }
 
 /**

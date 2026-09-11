@@ -7,6 +7,7 @@ import { levelLabel } from '@/core/content/levels'
 import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
+import { ShareSheet } from './ShareSheet'
 
 const CATEGORY_LABEL: Record<NonNullable<Word['category']>, string> = {
   comune: 'comune',
@@ -24,11 +25,15 @@ export function WordDetails({
    * the daily card and the bonus card have their own button right below.
    */
   learnAction = false,
+  /** Show the share icon. Off on the daily card, which has its own big button. */
+  shareAction = true,
 }: {
   word: Word
   learnAction?: boolean
+  shareAction?: boolean
 }) {
   const fav = useIsFavorite(word.id)
+  const [shareOpen, setShareOpen] = useState(false)
   const learned = useIsLearned(word.id)
   const savedNote = useNote(word.id)
   const [noteOpen, setNoteOpen] = useState(Boolean(savedNote))
@@ -60,6 +65,15 @@ export function WordDetails({
         >
           <Icon name="note" size={20} />
         </button>
+        {shareAction && (
+          <button
+            onClick={() => setShareOpen(true)}
+            aria-label="Condividi la parola"
+            className="rounded-full p-1.5 transition hover:bg-line/50"
+          >
+            <Icon name="share" size={20} />
+          </button>
+        )}
       </div>
 
       <p className="text-lg leading-relaxed">{word.meaning}</p>
@@ -133,6 +147,8 @@ export function WordDetails({
           </span>
         )}
       </div>
+
+      {shareAction && <ShareSheet word={word} open={shareOpen} onClose={() => setShareOpen(false)} />}
     </div>
   )
 }

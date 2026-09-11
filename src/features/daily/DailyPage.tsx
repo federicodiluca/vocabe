@@ -52,7 +52,7 @@ function DailyWord({ today }: { today: string }) {
 
         {revealed ? (
           <div className={justRevealed ? 'animate-rise' : undefined}>
-            <WordDetails word={word} />
+            <WordDetails word={word} shareAction={false} />
           </div>
         ) : (
           <p className="py-6 text-center text-ink-soft">Tocca per scoprire il significato</p>
@@ -84,7 +84,7 @@ function DailyWord({ today }: { today: string }) {
 
       {learned && pick.bonusId && <BonusWordCard wordId={pick.bonusId} />}
 
-      <ShareSheet word={word} open={shareOpen} onClose={() => setShareOpen(false)} />
+      <ShareSheet word={word} daily open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>
   )
 }
