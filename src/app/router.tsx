@@ -6,6 +6,7 @@ import { ExplorePage } from '@/features/explore/ExplorePage'
 import { CollectionPage } from '@/features/explore/CollectionPage'
 import { ProgressPage } from '@/features/progress/ProgressPage'
 import { SettingsPage } from '@/features/settings/SettingsPage'
+import { PlacementPage } from '@/features/placement/PlacementPage'
 
 export const router = createBrowserRouter(
   [
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
         { path: 'esplora/:collectionId', element: <CollectionPage /> },
         { path: 'progressi', element: <ProgressPage /> },
         { path: 'impostazioni', element: <SettingsPage /> },
+        { path: 'livello', element: <PlacementPage /> },
       ],
     },
   ],

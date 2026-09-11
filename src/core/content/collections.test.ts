@@ -47,7 +47,7 @@ describe('collection helpers', () => {
     expect(collectionWords(first).map((w) => w.id)).toEqual(first.wordIds)
   })
 
-  it('counts only the learned words of that collection', () => {
+  it('counts learned and already-known words of that collection', () => {
     const learned = {
       [first.wordIds[0]]: {
         learnedOn: '2026-09-07',
@@ -64,6 +64,7 @@ describe('collection helpers', () => {
         wrong: 0,
       },
     }
-    expect(collectionProgress(first, learned)).toBe(1)
+    expect(collectionProgress(first, { learned, known: [] })).toBe(1)
+    expect(collectionProgress(first, { learned, known: [first.wordIds[1]] })).toBe(2)
   })
 })

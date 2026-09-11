@@ -32,6 +32,7 @@ const PAGE = 40
 export function ExplorePage() {
   const favorites = useProgressSlice((s) => s.favorites)
   const learned = useProgressSlice((s) => s.learned)
+  const known = useProgressSlice((s) => s.known)
   const [category, setCategory] = useState<WordCategory | 'tutte'>('tutte')
   const [difficulty, setDifficulty] = useState(0)
   const [favOnly, setFavOnly] = useState(false)
@@ -73,7 +74,7 @@ export function ExplorePage() {
         <h2 className="mb-2 text-sm font-semibold text-ink-soft">Raccolte</h2>
         <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
           {COLLECTIONS.map((c) => {
-            const done = collectionProgress(c, learned)
+            const done = collectionProgress(c, { learned, known })
             const total = collectionWords(c).length
             return (
               <Link

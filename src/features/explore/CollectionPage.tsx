@@ -12,13 +12,14 @@ import { WordRow } from './WordRow'
 export function CollectionPage() {
   const { collectionId } = useParams()
   const learned = useProgressSlice((s) => s.learned)
+  const known = useProgressSlice((s) => s.known)
   const [open, setOpen] = useState<string | null>(null)
 
   const collection = collectionId ? getCollection(collectionId) : undefined
   if (!collection) return <Navigate to="/esplora" replace />
 
   const words = collectionWords(collection)
-  const done = collectionProgress(collection, learned)
+  const done = collectionProgress(collection, { learned, known })
   const complete = done === words.length
 
   return (

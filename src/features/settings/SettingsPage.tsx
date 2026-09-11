@@ -1,9 +1,12 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useProgressState } from '@/state/hooks'
-import { updateSettings, replaceProgress, resetProgress } from '@/state/store'
+import { updateSettings, replaceProgress, resetProgress, setLevel } from '@/state/store'
 import { exportState, parseImported } from '@/core/storage/store'
+import { LEVELS } from '@/core/content/levels'
 import type { ReadingFont, TextSize, ThemeSetting } from '@/core/types'
 import { Button } from '@/ui/Button'
+import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
 
 const THEMES: { value: ThemeSetting; label: string }[] = [
@@ -81,6 +84,42 @@ export function SettingsPage() {
 
   return (
     <div className="space-y-6 pt-2">
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-ink-soft">Livello di partenza</h2>
+        <p className="mb-3 text-xs text-ink-soft">
+          La parola del giorno viene scelta da questo livello in su. {LEVELS[state.level - 1].hint}.
+        </p>
+        <div className="space-y-1.5">
+          {LEVELS.map((l) => (
+            <button
+              key={l.value}
+              onClick={() => setLevel(l.value)}
+              className={cn(
+                'flex w-full items-center justify-between rounded-2xl border px-4 py-2.5 text-left text-sm transition',
+                state.level === l.value ? 'border-brand bg-brand-soft text-brand' : 'border-line',
+              )}
+            >
+              <span className="font-medium">{l.label}</span>
+              <span className={cn('text-xs', state.level === l.value ? 'text-brand' : 'text-ink-soft')}>
+                {'●'.repeat(l.value)}
+                {'○'.repeat(5 - l.value)}
+              </span>
+            </button>
+          ))}
+        </div>
+        <Link
+          to="/livello"
+          className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-line py-3 text-sm font-semibold transition hover:bg-line/40"
+        >
+          <Icon name="cards" size={18} /> Fai il test di livello
+        </Link>
+        {state.known.length > 0 && (
+          <p className="mt-2 text-xs text-ink-soft">
+            {state.known.length} {state.known.length === 1 ? 'parola che conoscevi già è messa' : 'parole che conoscevi già sono messe'} da parte.
+          </p>
+        )}
+      </section>
+
       <section className="space-y-4">
         <div>
           <h2 className="mb-2 text-sm font-semibold text-ink-soft">Tema</h2>

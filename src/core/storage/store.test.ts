@@ -23,6 +23,21 @@ describe('normalize', () => {
   it('stamps the current schema version', () => {
     expect(normalize({ version: 1, learned: {} }).version).toBe(STATE_VERSION)
   })
+
+  it('gives a reader without one a seed, and keeps the one they have', () => {
+    const fresh = normalize({ version: 2, learned: {} })
+    expect(typeof fresh.seed).toBe('number')
+    expect(normalize({ version: 2, learned: {}, seed: 12345 }).seed).toBe(12345)
+  })
+
+  it('clamps the level and drops a malformed daily assignment', () => {
+    expect(normalize({ version: 2, learned: {}, level: 9 }).level).toBe(5)
+    expect(normalize({ version: 2, learned: {}, level: -3 }).level).toBe(1)
+    expect(normalize({ version: 2, learned: {} }).level).toBe(1)
+    expect(normalize({ version: 2, learned: {}, daily: { date: '2026-09-07' } }).daily).toBeNull()
+    const ok = { date: '2026-09-07', wordId: 'sagace', bonusId: null }
+    expect(normalize({ version: 2, learned: {}, daily: ok }).daily).toEqual(ok)
+  })
 })
 
 describe('migration 1 → 2', () => {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { completeOnboarding } from '@/state/store'
 import { Button } from '@/ui/Button'
 import { Icon, type IconName } from '@/ui/Icon'
@@ -21,9 +22,15 @@ const SLIDES: { icon: IconName; title: string; body: string }[] = [
     title: 'Tutto resta con te',
     body: 'Niente account, niente tracciamento. I progressi vivono su questo dispositivo e puoi esportarli quando vuoi.',
   },
+  {
+    icon: 'chart',
+    title: 'Quanto ne sai già?',
+    body: 'Un test di due minuti: venti parole, dalle più comuni alle più rare. Da lì in poi ti proponiamo solo quelle che non conosci.',
+  },
 ]
 
 export function Onboarding() {
+  const navigate = useNavigate()
   const [i, setI] = useState(0)
   const last = i === SLIDES.length - 1
   const slide = SLIDES[i]
@@ -59,9 +66,26 @@ export function Onboarding() {
         ))}
       </div>
 
-      <Button className="w-full" onClick={() => (last ? completeOnboarding() : setI(i + 1))}>
-        {last ? 'Inizia' : 'Avanti'}
-      </Button>
+      {last ? (
+        <>
+          <Button
+            className="w-full"
+            onClick={() => {
+              completeOnboarding()
+              navigate('/livello', { replace: true })
+            }}
+          >
+            Fai il test
+          </Button>
+          <Button variant="ghost" className="mt-1 w-full" onClick={completeOnboarding}>
+            Salta, parto dal primo livello
+          </Button>
+        </>
+      ) : (
+        <Button className="w-full" onClick={() => setI(i + 1)}>
+          Avanti
+        </Button>
+      )}
     </div>
   )
 }

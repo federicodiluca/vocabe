@@ -1,9 +1,10 @@
-import type { ProgressState, Settings } from '@/core/types'
+import type { Difficulty, ProgressState, Settings } from '@/core/types'
 import { loadState, saveState, defaultState } from '@/core/storage/store'
 import { touchStreak } from '@/core/streak/streak'
 import { evaluateBadges } from '@/core/badges/badges'
 import { newEntry, grade } from '@/core/srs/leitner'
 import { localDateKey } from '@/core/date'
+import { pickDaily, RECENT_LIMIT } from '@/core/content/picker'
 
 /*
  * Progress lives in a plain module-level store rather than React context: with a
@@ -152,6 +153,40 @@ export function setNote(wordId: string, text: string): void {
 
 export function updateSettings(patch: Partial<Settings>): void {
   update((s) => ({ ...s, settings: { ...s.settings, ...patch } }))
+}
+
+/**
+ * Fix today's word and bonus word if not done yet. Idempotent within a day. The
+ * pick is what `pickDaily` would return for the current state, so a component
+ * that computed it first and this action always agree.
+ */
+export function ensureDaily(today = localDateKey()): void {
+  update((s) => {
+    if (s.daily?.date === today) return s
+    const pick = pickDaily(s)
+    const shown = [pick.wordId, ...(pick.bonusId ? [pick.bonusId] : [])]
+    const recent = [...s.recent.filter((id) => !shown.includes(id)), ...shown].slice(-RECENT_LIMIT)
+    return { ...s, daily: { date: today, ...pick }, recent }
+  })
+}
+
+/** Change the starting level by hand. Today's word is re-picked under the new level. */
+export function setLevel(level: Difficulty): void {
+  update((s) => (s.level === level ? s : { ...s, level, daily: null }))
+}
+
+/**
+ * Apply a placement result: the level to start from and the words the reader
+ * proved to know. Today's assignment is dropped so tomorrow — or a reload —
+ * starts from the new level rather than a word picked under the old one.
+ */
+export function applyPlacement(level: Difficulty, knownIds: string[]): void {
+  update((s) => ({
+    ...s,
+    level,
+    known: [...new Set([...s.known, ...knownIds])],
+    daily: null,
+  }))
 }
 
 /** Remember that the recap for the week starting `weekFrom` has been shown. */

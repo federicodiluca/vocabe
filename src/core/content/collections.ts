@@ -32,15 +32,19 @@ export function collectionWords(c: Collection): Word[] {
   return WORDS_BY_ID.get(c.id) ?? []
 }
 
-/** How many of the collection's words the reader has already learned. */
-export function collectionProgress(c: Collection, learned: ProgressState['learned']): number {
-  return collectionWords(c).reduce((n, w) => n + (w.id in learned ? 1 : 0), 0)
+type Progress = Pick<ProgressState, 'learned' | 'known'>
+
+/**
+ * How many of the collection's words the reader has covered — learned in the
+ * app, or already known before it (placement test). Both count: a collection is
+ * about knowing the words, not about where you got them.
+ */
+export function collectionProgress(c: Collection, { learned, known }: Progress): number {
+  const done = new Set(known)
+  return collectionWords(c).reduce((n, w) => n + (w.id in learned || done.has(w.id) ? 1 : 0), 0)
 }
 
-export function isCollectionComplete(
-  c: Collection,
-  learned: ProgressState['learned'],
-): boolean {
+export function isCollectionComplete(c: Collection, progress: Progress): boolean {
   const words = collectionWords(c)
-  return words.length > 0 && collectionProgress(c, learned) === words.length
+  return words.length > 0 && collectionProgress(c, progress) === words.length
 }

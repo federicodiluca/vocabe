@@ -1,5 +1,6 @@
 import type { ProgressState, Settings } from '@/core/types'
 import { localDateKey } from '@/core/date'
+import { toLevel } from '@/core/content/levels'
 
 export const KEY = 'vocabe:v1'
 /** Bump together with a new entry in MIGRATIONS below. */
@@ -10,6 +11,11 @@ export const DEFAULT_SETTINGS: Settings = {
   readingFont: 'serif',
   textSize: 'normale',
   name: '',
+}
+
+/** A fresh 32-bit seed. Persisted on first save, so a reader's sequence never changes. */
+function newSeed(): number {
+  return Math.floor(Math.random() * 0x1_0000_0000)
 }
 
 export function defaultState(): ProgressState {
@@ -24,6 +30,11 @@ export function defaultState(): ProgressState {
     notes: {},
     onboarded: false,
     lastRecapSeen: null,
+    level: 1,
+    known: [],
+    seed: newSeed(),
+    daily: null,
+    recent: [],
     settings: { ...DEFAULT_SETTINGS },
     startedOn: today,
   }
@@ -91,6 +102,12 @@ function migrate(input: RawState): RawState {
   return { ...s, version: STATE_VERSION }
 }
 
+function isDaily(d: unknown): d is NonNullable<ProgressState['daily']> {
+  if (!d || typeof d !== 'object') return false
+  const x = d as Record<string, unknown>
+  return typeof x.date === 'string' && typeof x.wordId === 'string'
+}
+
 /** Run migrations, then coerce anything missing or malformed to a safe default. */
 export function normalize(input: unknown): ProgressState {
   const base = defaultState()
@@ -109,6 +126,11 @@ export function normalize(input: unknown): ProgressState {
     notes: s.notes && typeof s.notes === 'object' ? s.notes : base.notes,
     onboarded: typeof s.onboarded === 'boolean' ? s.onboarded : base.onboarded,
     lastRecapSeen: typeof s.lastRecapSeen === 'string' ? s.lastRecapSeen : base.lastRecapSeen,
+    level: typeof s.level === 'number' ? toLevel(s.level) : base.level,
+    known: Array.isArray(s.known) ? s.known : base.known,
+    seed: typeof s.seed === 'number' ? s.seed : base.seed,
+    daily: isDaily(s.daily) ? s.daily : base.daily,
+    recent: Array.isArray(s.recent) ? s.recent : base.recent,
     settings: { ...base.settings, ...(s.settings ?? {}) },
     startedOn: typeof s.startedOn === 'string' ? s.startedOn : base.startedOn,
   }

@@ -1,5 +1,4 @@
-import { useMemo } from 'react'
-import { bonusWordForDay } from '@/core/content/words'
+import { getWord } from '@/core/content/words'
 import { useIsLearned } from '@/state/hooks'
 import { markLearned, unmarkLearned } from '@/state/store'
 import { Button } from '@/ui/Button'
@@ -8,9 +7,9 @@ import { Icon } from '@/ui/Icon'
 import { WordDetails } from './WordDetails'
 
 /** A second word, offered once the day's word has been learned. */
-export function BonusWordCard() {
-  const bonusWord = useMemo(() => bonusWordForDay(), [])
-  const learned = useIsLearned(bonusWord?.id ?? '')
+export function BonusWordCard({ wordId }: { wordId: string }) {
+  const bonusWord = getWord(wordId)
+  const learned = useIsLearned(wordId)
 
   if (!bonusWord) return null
 

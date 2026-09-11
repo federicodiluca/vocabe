@@ -77,6 +77,19 @@ export type ProgressState = {
   onboarded: boolean
   /** Monday of the last week whose recap was shown — keeps it to once a week */
   lastRecapSeen: string | null
+  /**
+   * Rarity level the reader starts from: the daily word is drawn from this level
+   * and above. Set by the placement test or by hand in Opzioni.
+   */
+  level: Difficulty
+  /** word ids the reader already knew (placement test) — never offered as daily words */
+  known: string[]
+  /** per-reader shuffle seed, drawn once — makes everyone's sequence different */
+  seed: number
+  /** today's assignment, fixed for the whole day so it never swaps under the reader */
+  daily: { date: string; wordId: string; bonusId: string | null } | null
+  /** ids recently shown as daily or bonus, oldest first — kept out of rotation for a while */
+  recent: string[]
   settings: Settings
   /** ISO date (local) the app was first opened */
   startedOn: string

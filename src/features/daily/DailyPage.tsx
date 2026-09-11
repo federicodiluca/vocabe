@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useToday } from '@/app/useToday'
-import { wordForDay } from '@/core/content/words'
-import { useIsLearned } from '@/state/hooks'
-import { markLearned, unmarkLearned } from '@/state/store'
+import { useDailyPick, useIsLearned } from '@/state/hooks'
+import { ensureDaily, markLearned, unmarkLearned } from '@/state/store'
+import { getWord } from '@/core/content/words'
 import { Button } from '@/ui/Button'
 import { Card } from '@/ui/Card'
 import { Icon } from '@/ui/Icon'
@@ -15,11 +15,16 @@ const todayLabel = () =>
 
 /** Remounted when the date rolls over, so no local state survives into the new day. */
 export function DailyPage() {
-  return <DailyWord key={useToday()} />
+  const today = useToday()
+  // Persist today's pick once. The hook below already renders the same word
+  // before this runs, so there is no flash of a different word.
+  useEffect(() => ensureDaily(today), [today])
+  return <DailyWord key={today} today={today} />
 }
 
-function DailyWord() {
-  const word = useMemo(() => wordForDay(), [])
+function DailyWord({ today }: { today: string }) {
+  const pick = useDailyPick(today)
+  const word = getWord(pick.wordId)!
   const learned = useIsLearned(word.id)
   const [revealed, setRevealed] = useState(learned)
   const [justRevealed, setJustRevealed] = useState(false)
@@ -77,7 +82,7 @@ function DailyWord() {
         </div>
       )}
 
-      {learned && <BonusWordCard />}
+      {learned && pick.bonusId && <BonusWordCard wordId={pick.bonusId} />}
 
       <ShareSheet word={word} open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>
