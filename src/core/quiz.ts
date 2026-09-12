@@ -12,7 +12,7 @@ export type Question = {
   answer: number
 }
 
-export const QUIZ_LENGTH = 8
+export const QUIZ_LENGTH = 5
 /** From this Leitner box on, the harder "definition → word" direction kicks in. */
 export const INVERSE_FROM_BOX = 3
 const OPTIONS = 4
@@ -28,27 +28,46 @@ function shuffle<T>(arr: readonly T[], rnd: Rng): T[] {
   return out
 }
 
-const byCategory = new Map<string, Word[]>()
+/**
+ * The grammatical family of a word: a verb's definition can only be confused
+ * with another verb's, a noun's with a noun's. Finer distinctions (transitive
+ * vs intransitive, masculine vs feminine) don't show in a definition, so they
+ * are folded together — which also keeps the tiny classes usable.
+ */
+export function posFamily(pos: string | undefined): 'verbo' | 'nome' | 'aggettivo' | 'altro' {
+  if (!pos) return 'altro'
+  if (pos.startsWith('v.')) return 'verbo'
+  if (pos.startsWith('s.')) return 'nome'
+  if (pos.startsWith('agg')) return 'aggettivo'
+  return 'altro'
+}
+
+const byFamily = new Map<string, Word[]>()
 for (const w of WORDS) {
-  const key = w.category ?? 'senza-categoria'
-  const bucket = byCategory.get(key)
+  const key = posFamily(w.pos)
+  const bucket = byFamily.get(key)
   if (bucket) bucket.push(w)
-  else byCategory.set(key, [w])
+  else byFamily.set(key, [w])
 }
 
 /**
  * Distractors drawn at random from the whole list are usually giveaways — a
- * literary term next to three everyday ones answers itself. Fill from the
- * narrowest pool first (same category and difficulty), widening only to top up.
+ * literary term next to three everyday ones answers itself, and so does an
+ * adjective's definition offered for a verb. So the candidates must share the
+ * word's grammatical family, and within it the narrowest pool comes first
+ * (same category and difficulty), widening only to top up. The whole list is
+ * the last resort, for families too small to fill the options (adverbs).
  */
 function distractorsFor(word: Word, count: number, rnd: Rng): Word[] {
   const chosen: Word[] = []
   const used = new Set([word.id])
-  const sameCategory = byCategory.get(word.category ?? 'senza-categoria') ?? []
+  const family = byFamily.get(posFamily(word.pos)) ?? []
+  const sameCategory = family.filter((w) => w.category === word.category)
 
   const tiers: readonly Word[][] = [
     sameCategory.filter((w) => w.difficulty === word.difficulty),
     sameCategory,
+    family,
     WORDS,
   ]
 

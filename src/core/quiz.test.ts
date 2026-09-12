@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildQuiz, makeQuestion, QUIZ_LENGTH, INVERSE_FROM_BOX } from './quiz'
+import { buildQuiz, makeQuestion, posFamily, QUIZ_LENGTH, INVERSE_FROM_BOX } from './quiz'
 import { WORDS, getWord } from './content/words'
 
 /** Deterministic stand-in for Math.random so option order is reproducible. */
@@ -38,6 +38,51 @@ describe('makeQuestion', () => {
     const q = makeQuestion(word, 'inverse', seededRng(7))
     const distractors = q.options.filter((o) => o !== word.term).map((o) => WORDS.find((w) => w.term === o)!)
     expect(distractors.every((w) => w.category === word.category)).toBe(true)
+  })
+})
+
+describe('distractors and part of speech', () => {
+  const byTerm = new Map(WORDS.map((w) => [w.term, w]))
+  const byMeaning = new Map(WORDS.map((w) => [w.meaning, w]))
+
+  it('never offers a definition of another part of speech (whole dataset, forward)', () => {
+    const rng = seededRng(3)
+    const offenders: string[] = []
+    for (const w of WORDS) {
+      const q = makeQuestion(w, 'forward', rng)
+      for (const opt of q.options) {
+        const other = byMeaning.get(opt)!
+        if (posFamily(other.pos) !== posFamily(w.pos) && posFamily(w.pos) !== 'altro') {
+          offenders.push(`${w.term} (${w.pos}) ← ${other.term} (${other.pos})`)
+        }
+      }
+    }
+    expect(offenders).toEqual([])
+  })
+
+  it('never offers a term of another part of speech (whole dataset, inverse)', () => {
+    const rng = seededRng(4)
+    const offenders: string[] = []
+    for (const w of WORDS) {
+      const q = makeQuestion(w, 'inverse', rng)
+      for (const opt of q.options) {
+        const other = byTerm.get(opt)!
+        if (posFamily(other.pos) !== posFamily(w.pos) && posFamily(w.pos) !== 'altro') {
+          offenders.push(`${w.term} (${w.pos}) ← ${other.term} (${other.pos})`)
+        }
+      }
+    }
+    expect(offenders).toEqual([])
+  })
+
+  it('folds verb, noun and adjective subtypes into one family each', () => {
+    expect(posFamily('v.tr.')).toBe(posFamily('v.intr.'))
+    expect(posFamily('v.rifl.')).toBe('verbo')
+    expect(posFamily('s.m.')).toBe(posFamily('s.f.'))
+    expect(posFamily('s.m./f.')).toBe('nome')
+    expect(posFamily('agg.')).toBe('aggettivo')
+    expect(posFamily('avv.')).toBe('altro')
+    expect(posFamily(undefined)).toBe('altro')
   })
 })
 
