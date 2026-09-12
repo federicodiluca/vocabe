@@ -46,6 +46,11 @@ Vocabe è gratuito e senza pubblicità: nessun account, nessun acquisto, nessun 
 terze parti, nessuna analitica. Non c'è app da installare dagli store — dal browser di uno
 smartphone si aggiunge alla schermata home e si comporta come un'app, anche offline.
 
+## Licenza
+
+Codice: [MIT](LICENSE). Dati (`src/data/`): [CC BY-SA 4.0](src/data/LICENSE) — riusabili
+citando Vocabe e mantenendo la stessa licenza.
+
 ---
 
 [Federico Di Luca](https://federicodiluca.github.io/)
