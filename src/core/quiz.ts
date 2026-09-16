@@ -58,6 +58,23 @@ for (const w of WORDS) {
  * (same category and difficulty), widening only to top up. The whole list is
  * the last resort, for families too small to fill the options (adverbs).
  */
+const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+/** The first letters of a term, enough to recognise its inflected and derived forms. */
+export function stemOf(term: string): string {
+  return fold(term).slice(0, Math.max(4, term.length - 3))
+}
+
+/**
+ * True when one word gives the other away: its definition contains the other's
+ * root ("bruma" in an option when the question is about "brumoso"), in either
+ * direction. Such a pair must never sit in the same question.
+ */
+export function leaks(a: Word, b: Word): boolean {
+  const ma = fold(a.meaning)
+  const mb = fold(b.meaning)
+  return new RegExp(`\\b${stemOf(a.term)}`).test(mb) || new RegExp(`\\b${stemOf(b.term)}`).test(ma)
+}
+
 function distractorsFor(word: Word, count: number, rnd: Rng): Word[] {
   const chosen: Word[] = []
   const used = new Set([word.id])
@@ -77,6 +94,7 @@ function distractorsFor(word: Word, count: number, rnd: Rng): Word[] {
       if (chosen.length >= count) break
       if (used.has(candidate.id)) continue
       used.add(candidate.id)
+      if (leaks(word, candidate)) continue
       chosen.push(candidate)
     }
   }

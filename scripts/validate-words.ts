@@ -18,6 +18,11 @@ const seen = new Set<string>()
 const seenTerms = new Map<string, string>()
 const seenMeanings = new Map<string, string>()
 
+// A definition that contains its own word (or its root) answers the quiz for
+// you: "borioso — pieno di boria". Set phrases belong in `usage`, not here.
+const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+const stemOf = (term: string) => fold(term).slice(0, Math.max(4, term.length - 3))
+
 words.forEach((w, i) => {
   const at = `#${i} (${String(w.term ?? '??')})`
   const id = w.id
@@ -39,6 +44,8 @@ words.forEach((w, i) => {
     const other = seenMeanings.get(w.meaning as string)
     if (other) errors.push(`${at}: meaning identico a quello di "${other}"`)
     else seenMeanings.set(w.meaning as string, String(id))
+    if (typeof w.term === 'string' && new RegExp(`\\b${stemOf(w.term)}`).test(fold(w.meaning as string)))
+      errors.push(`${at}: il significato contiene la radice del termine (sposta la locuzione in "usage")`)
   }
 
   if (!Array.isArray(w.examples) || w.examples.length < 1)

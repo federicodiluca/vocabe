@@ -106,6 +106,7 @@ function wordPage(word, prev, next) {
 <h1>${esc(word.term)}</h1>
 ${word.pos ? `<p class="pos">${esc(word.pos)}</p>` : ''}
 <p class="def">${esc(word.meaning)}</p>
+${word.usage ? `<p class="pos">Si usa: ${esc(word.usage)}</p>` : ''}
 ${
   word.examples?.length
     ? `<h2>Esempi d'uso</h2><ul class="ex">${word.examples.map((e) => `<li>${esc(e)}</li>`).join('')}</ul>`

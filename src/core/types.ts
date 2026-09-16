@@ -16,6 +16,8 @@ export type Word = {
   /** part of speech, e.g. "agg." / "s.m." / "v.tr." */
   pos?: string
   meaning: string
+  /** a set phrase or construction the word lives in, e.g. «sotto l'egida di» */
+  usage?: string
   examples: string[]
   synonyms?: string[]
   etymology?: string

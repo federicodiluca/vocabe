@@ -78,6 +78,12 @@ export function WordDetails({
 
       <p className="text-lg leading-relaxed">{word.meaning}</p>
 
+      {word.usage && (
+        <p className="text-sm text-ink-soft">
+          <span className="font-semibold text-ink">Si usa:</span> {word.usage}
+        </p>
+      )}
+
       {word.examples.length > 0 && (
         <ul className="space-y-2 border-l-2 border-brand/40 pl-4">
           {word.examples.map((ex, i) => (

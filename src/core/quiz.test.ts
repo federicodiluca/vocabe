@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildQuiz, makeQuestion, posFamily, QUIZ_LENGTH, INVERSE_FROM_BOX } from './quiz'
+import { buildQuiz, leaks, makeQuestion, posFamily, stemOf, QUIZ_LENGTH, INVERSE_FROM_BOX } from './quiz'
 import { WORDS, getWord } from './content/words'
 
 /** Deterministic stand-in for Math.random so option order is reproducible. */
@@ -73,6 +73,27 @@ describe('distractors and part of speech', () => {
       }
     }
     expect(offenders).toEqual([])
+  })
+
+  it('never lets an option give the answer away through a shared root (whole dataset)', () => {
+    const rng = seededRng(5)
+    const offenders: string[] = []
+    for (const w of WORDS) {
+      for (const direction of ['forward', 'inverse'] as const) {
+        const q = makeQuestion(w, direction, rng)
+        const others = q.options
+          .map((opt) => (direction === 'forward' ? byMeaning : byTerm).get(opt)!)
+          .filter((o) => o.id !== w.id)
+        for (const o of others) if (leaks(w, o)) offenders.push(`${w.term} <-> ${o.term}`)
+      }
+    }
+    expect(offenders).toEqual([])
+  })
+
+  it('no definition contains its own word or root (whole dataset)', () => {
+    const fold = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    const bad = WORDS.filter((w) => new RegExp('\\b' + stemOf(w.term)).test(fold(w.meaning))).map((w) => w.term)
+    expect(bad).toEqual([])
   })
 
   it('folds verb, noun and adjective subtypes into one family each', () => {
