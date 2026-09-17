@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "words:validate": "tsx scripts/validate-words.ts",
     "icons:build": "node scripts/build-icons.mjs",
+    "social:build": "node scripts/build-social-image.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },
