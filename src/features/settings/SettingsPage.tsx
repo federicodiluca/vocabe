@@ -8,6 +8,7 @@ import type { ReadingFont, TextSize, ThemeSetting } from '@/core/types'
 import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
+import { InviteSheet } from './InviteSheet'
 
 const THEMES: { value: ThemeSetting; label: string }[] = [
   { value: 'system', label: 'Sistema' },
@@ -57,6 +58,7 @@ export function SettingsPage() {
   const state = useProgressState()
   const fileRef = useRef<HTMLInputElement>(null)
   const [msg, setMsg] = useState<string | null>(null)
+  const [inviteOpen, setInviteOpen] = useState(false)
 
   function flash(text: string) {
     setMsg(text)
@@ -185,6 +187,13 @@ export function SettingsPage() {
         {msg && <p className="mt-2 text-center text-sm text-ink-soft">{msg}</p>}
       </section>
 
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-ink-soft">Fai conoscere Vocabe</h2>
+        <Button variant="outline" className="w-full" onClick={() => setInviteOpen(true)}>
+          <Icon name="share" size={18} /> Invita un amico
+        </Button>
+      </section>
+
       <p className="pt-4 text-center text-xs text-ink-soft">
         <a href={`${import.meta.env.BASE_URL}parole/`} className="underline">
           Glossario
@@ -207,6 +216,8 @@ export function SettingsPage() {
           Federico Di Luca
         </a>
       </p>
+
+      <InviteSheet open={inviteOpen} onClose={() => setInviteOpen(false)} />
     </div>
   )
 }

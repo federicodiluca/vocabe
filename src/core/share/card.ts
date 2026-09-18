@@ -1,6 +1,7 @@
 import type { ProgressState, Word } from '@/core/types'
 import type { Badge } from '@/core/badges/badges'
 import { displayStreak } from '@/core/streak/streak'
+import { WORDS } from '@/core/content/words'
 import { SITE_LABEL } from '@/core/site'
 import { shareKicker } from './share'
 
@@ -145,6 +146,19 @@ function statTag(state: ProgressState): string {
   return streak > 0 ? `serie di ${streak} giorni` : `${learned} parole imparate`
 }
 
+/**
+ * Same idea as statTag, but for the invite card: "0 parole imparate" would
+ * undersell the app to a stranger, so an empty state falls back to the
+ * dataset size — a real number that still makes the case.
+ */
+function inviteTag(state: ProgressState): string {
+  const streak = displayStreak(state.streak)
+  const learned = Object.keys(state.learned).length
+  if (streak > 0) return `serie di ${streak} giorni`
+  if (learned > 0) return `${learned} parole imparate`
+  return `${WORDS.length} parole da scoprire`
+}
+
 export async function renderShareCard(
   word: Word,
   state: ProgressState,
@@ -240,6 +254,58 @@ export async function renderMilestoneCard(badge: Badge, state: ProgressState): P
   ctx.fillText(badge.name, W / 2, 890)
 
   return closeCard(canvas, ctx, statTag(state))
+}
+
+/**
+ * The invite card: no word, no personal figure — just the mark, the pitch and
+ * the link large enough to read on a phone screenshot. Meant for a first post
+ * or story aimed at people who have never opened the app.
+ */
+export async function renderInviteCard(state: ProgressState): Promise<Blob> {
+  const { canvas, ctx } = await openCard('web app gratuita')
+
+  // mark, large and centered — the same glyph as the header, blown up
+  ctx.save()
+  ctx.translate(W / 2 - 90, 260)
+  drawMark(ctx, 0, 0, 180)
+  ctx.restore()
+
+  ctx.textAlign = 'center'
+  ctx.fillStyle = COLORS.ink
+  ctx.font = `700 68px ${SERIF}`
+  const headline = wrap(ctx, 'Una parola italiana al giorno', W - PAD * 2, 2)
+  const headlineLineHeight = 78
+  // Anchor the block so a one-line headline and a two-line headline both end
+  // at the same baseline, keeping the pitch below it at a fixed position.
+  let y = 640 - (headline.length - 1) * headlineLineHeight
+  for (const ln of headline) {
+    ctx.fillText(ln, W / 2, y)
+    y += headlineLineHeight
+  }
+
+  y += 40
+  ctx.fillStyle = COLORS.soft
+  ctx.font = `400 38px ${SANS}`
+  const pitch = wrap(ctx, "È online: si apre dal browser e si installa come un'app, gratis.", W - PAD * 2 - 40, 3)
+  for (const ln of pitch) {
+    ctx.fillText(ln, W / 2, y)
+    y += 52
+  }
+
+  // the link is the call to action here, so it gets its own prominent line
+  ctx.strokeStyle = COLORS.brand
+  ctx.lineWidth = 4
+  ctx.beginPath()
+  ctx.moveTo(W / 2 - 48, y + 24)
+  ctx.lineTo(W / 2 + 48, y + 24)
+  ctx.stroke()
+
+  ctx.fillStyle = COLORS.brand
+  ctx.font = `700 46px ${SANS}`
+  ctx.fillText(SITE_LABEL, W / 2, y + 96)
+  ctx.textAlign = 'left'
+
+  return closeCard(canvas, ctx, inviteTag(state))
 }
 
 /**
