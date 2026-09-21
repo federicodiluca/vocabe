@@ -88,7 +88,7 @@
       "ostacoloso",
       "arcigno"
     ],
-    "etymology": "Dal latino 'hosticus' «nemico», da 'hostis».",
+    "etymology": "Dal latino 'hosticus', da 'hostis' «nemico, straniero».",
     "category": "comune",
     "difficulty": 1
   },
@@ -314,7 +314,7 @@
       "penetrazione"
     ],
     "etymology": "Dal latino 'acumen' «punta», da 'acus' «ago».",
-    "curiosity": "Dal latino 'acumen', «punta»: la stessa immagine dell'ingegno appuntito è passata di peso all'inglese 'acumen'.",
+    "curiosity": "La stessa parola è passata di peso all'inglese 'acumen'.",
     "category": "comune",
     "difficulty": 2
   },
@@ -522,7 +522,7 @@
       "confermare"
     ],
     "etymology": "Dal latino 'corroborare', da 'robur' «forza, quercia».",
-    "curiosity": "Il latino 'robur' vuol dire sia «forza» sia «quercia»: corroborare una tesi è renderla salda come una quercia, come in 'robusto' e 'roborante'.",
+    "curiosity": "Stessa radice di 'robusto' e di 'roborante'.",
     "category": "comune",
     "difficulty": 3
   },
@@ -541,7 +541,7 @@
       "letale"
     ],
     "etymology": "Dal latino 'exitialis', da 'exitium' «rovina, fine».",
-    "curiosity": "Dal latino 'exitium', «rovina, fine»: la stessa radice di 'esito', che però in italiano ha conservato solo il senso neutro di «risultato».",
+    "curiosity": "Stessa radice di 'esito', che però in italiano ha conservato solo il senso neutro di «risultato».",
     "category": "letteraria",
     "difficulty": 4
   },
@@ -568,7 +568,7 @@
     "id": "coacervo",
     "term": "coacervo",
     "pos": "s.m.",
-    "meaning": "Ammasso disordinato e confuso di cose o elementi diversi.",
+    "meaning": "Somma di elementi diversi accumulati fino a formare un blocco unico.",
     "examples": [
       "Un coacervo di norme contraddittorie.",
       "La relazione era un coacervo di dati senza filo logico."
@@ -579,7 +579,7 @@
       "ammasso"
     ],
     "etymology": "Dal latino 'coacervus', da 'acervus' «mucchio».",
-    "curiosity": "Dal latino 'acervus', «mucchio»: lo stesso della locuzione giuridica «coacervo dei redditi», la loro somma ai fini fiscali.",
+    "curiosity": "Sopravvive come termine tecnico nella locuzione fiscale «coacervo dei redditi», la loro somma.",
     "category": "letteraria",
     "difficulty": 4
   },
@@ -839,7 +839,6 @@
       "insigne"
     ],
     "etymology": "Dal latino 'eximius' «scelto, eccezionale», da 'eximere' «togliere fuori (dalla massa)».",
-    "curiosity": "Dal latino 'eximius', da 'eximere' «togliere fuori»: l'esimio è letteralmente chi viene tirato fuori dalla massa.",
     "category": "letteraria",
     "difficulty": 3
   },
@@ -1369,7 +1368,7 @@
       "fanfarone",
       "gradasso"
     ],
-    "etymology": "Dallo spagnolo 'esmargizar', forse legato allo spavento ('smargiare' = intimorire).",
+    "etymology": "Di origine incerta, forse dallo spagnolo; legato a 'smargiare' «fare lo spaccone».",
     "category": "comune",
     "difficulty": 3
   },
@@ -1671,7 +1670,7 @@
     "id": "dissennato",
     "term": "dissennato",
     "pos": "agg.",
-    "meaning": "Privo di senno, che agisce in modo irragionevole.",
+    "meaning": "Che agisce senza alcun giudizio, come chi ha perso la ragione.",
     "examples": [
       "Un piano dissennato destinato a fallire.",
       "Una spesa dissennata fatta d'impulso."
@@ -1789,7 +1788,7 @@
     "synonyms": [
       "ispirazione",
       "slancio",
-      "afflato creativo"
+      "trasporto"
     ],
     "etymology": "Dal latino 'afflatus', da 'afflare' «soffiare verso».",
     "curiosity": "L'ispirazione immaginata come un respiro che arriva da fuori: la stessa immagine sta dentro 'ispirazione' e 'spirito'.",
@@ -1866,7 +1865,7 @@
       "tormentare",
       "angariare"
     ],
-    "etymology": "Dal latino 'vexare', frequentativo di 'vehere' «scuotere».",
+    "etymology": "Dal latino 'vexare' «scuotere, tormentare», intensivo di 'vehere' «trasportare».",
     "curiosity": "'Vehere' («trasportare») è anche la radice di 'veicolo': vessare è scuotere qualcuno di continuo.",
     "category": "comune",
     "difficulty": 3
@@ -2087,7 +2086,7 @@
       "silhouette",
       "tipo bizzarro"
     ],
-    "etymology": "Dal francese antico 'saumon' o dal provenzale, con evoluzione incerta.",
+    "etymology": "Dal latino tardo 'sacoma', dal greco 'sḗkōma' «contrappeso».",
     "category": "comune",
     "difficulty": 1
   },
@@ -2240,7 +2239,7 @@
     "id": "abborracciato",
     "term": "abborracciato",
     "pos": "agg.",
-    "meaning": "Fatto in modo frettoloso e disordinato, senza cura.",
+    "meaning": "Fatto in fretta e alla carlona, con esito grossolano.",
     "examples": [
       "Un lavoro abborracciato consegnato all'ultimo minuto.",
       "Una spiegazione abborracciata che convinse pochi."
@@ -2717,7 +2716,7 @@
     "pos": "s.f.",
     "meaning": "Esagerazione retorica usata per enfatizzare un concetto.",
     "examples": [
-      "\"Te l'ho detto un milione di volte\" è un'iperbole.",
+      "«Te l'ho detto un milione di volte» è un'iperbole.",
       "Il discorso era pieno di iperboli poco credibili."
     ],
     "synonyms": [
@@ -2819,7 +2818,7 @@
       "riconoscimento"
     ],
     "etymology": "Dal greco 'enkṓmion', da 'en' «in» e 'kômos' «corteo festivo».",
-    "curiosity": "Il 'kômos' greco era il corteo festivo in onore di Dioniso: l'encomio era il canto che si intonava sfilando.",
+    "curiosity": "Il corteo era quello in onore di Dioniso: l'encomio si intonava sfilando.",
     "category": "comune",
     "difficulty": 3
   },
@@ -2929,7 +2928,7 @@
       "avarizia",
       "taccagneria"
     ],
-    "etymology": "Da 'gretto', forse dal latino 'grex' «gregge» nel senso di volgare.",
+    "etymology": "Da 'gretto', dal gotico 'grědus' «fame».",
     "category": "comune",
     "difficulty": 3
   },
@@ -3375,7 +3374,7 @@
     "id": "balzano",
     "term": "balzano",
     "pos": "agg.",
-    "meaning": "Bizzarro e stravagante, fuori dal comune in modo curioso.",
+    "meaning": "Detto soprattutto di idee: strampalato, venuto in mente all'improvviso.",
     "examples": [
       "Un'idea balzana venuta di notte.",
       "Un progetto balzano che nessuno prese sul serio."
@@ -3421,7 +3420,7 @@
       "sinistro",
       "malvagio"
     ],
-    "etymology": "Dal germanico, forse imparentato con 'bieco' nel senso di storto/obliquo.",
+    "etymology": "Dal latino 'obliquus' «storto», attraverso la forma popolare 'bliecu'.",
     "category": "letteraria",
     "difficulty": 2
   },
@@ -3783,7 +3782,7 @@
       "disputare",
       "dissertare"
     ],
-    "etymology": "Dal latino 'dissertare', frequentativo di 'disserere' «esporre in ordine».",
+    "etymology": "Dal latino 'disceptare' «disputare», da 'dis-' e 'captare' «cercare di prendere».",
     "category": "letteraria",
     "difficulty": 4
   },
@@ -4106,7 +4105,7 @@
     "meaning": "Che annuncia o preannuncia qualcosa che sta per accadere.",
     "examples": [
       "Nuvole nere foriere di tempesta.",
-      "Segnali foriere di un cambiamento politico."
+      "Segnali forieri di un cambiamento politico."
     ],
     "synonyms": [
       "annunciatore",
@@ -4212,7 +4211,7 @@
     "id": "giulivo",
     "term": "giulivo",
     "pos": "agg.",
-    "meaning": "Allegro e sereno, di buon umore in modo spontaneo.",
+    "meaning": "Contento e spensierato, di una letizia tranquilla e un po' ingenua.",
     "examples": [
       "Un'aria giuliva pervadeva la festa.",
       "Tornò a casa giulivo per la buona notizia."
@@ -4291,7 +4290,8 @@
     ],
     "synonyms": [
       "adeguatezza",
-      "idoneo requisito"
+      "attitudine",
+      "capacità"
     ],
     "etymology": "Dal latino 'idoneus' «adatto».",
     "category": "comune",
@@ -4577,7 +4577,7 @@
     "id": "insano",
     "term": "insano",
     "pos": "agg.",
-    "meaning": "Privo di senno, dannoso o irragionevole in modo estremo.",
+    "meaning": "Contrario alla ragione e alla salute, dannoso nelle conseguenze.",
     "examples": [
       "Un gesto insano dettato dalla disperazione.",
       "Un piano insano che nessuno avrebbe approvato."
@@ -4864,7 +4864,7 @@
       "sonnolento"
     ],
     "etymology": "Dal greco 'lēthargikós', da 'lḗthē' «oblio».",
-    "curiosity": "Da 'letargo': il greco 'léthe' significa «oblio», ed è il nome del fiume infernale la cui acqua faceva dimenticare la vita passata.",
+    "curiosity": "'Léthe' è anche il nome del fiume infernale, la cui acqua faceva dimenticare la vita passata.",
     "category": "comune",
     "difficulty": 1
   },
@@ -4882,7 +4882,7 @@
       "manierato",
       "sdolcinato"
     ],
-    "etymology": "Da 'lezio', vezzo affettato, forse dal francese antico.",
+    "etymology": "Da 'lezio' «moina affettata», dal latino 'delicium' «delizia».",
     "category": "comune",
     "difficulty": 3
   },
@@ -5248,7 +5248,7 @@
     "synonyms": [
       "deferente",
       "servile",
-      "piaggione"
+      "piaggiatore"
     ],
     "etymology": "Da 'ossequio', dal latino 'obsequium' «compiacenza».",
     "curiosity": "Dentro c'è 'sequi', «seguire»: l'ossequio è un andare dietro a qualcuno.",
@@ -5289,7 +5289,7 @@
       "chiaro"
     ],
     "etymology": "Dal latino 'palam' «apertamente».",
-    "curiosity": "Il latino 'palam' («apertamente») sta anche dentro 'propalare', divulgare.",
+    "curiosity": "Lo stesso 'palam' sta dentro 'propalare', divulgare ciò che era segreto.",
     "category": "comune",
     "difficulty": 1
   },
@@ -5583,7 +5583,7 @@
       "presagire"
     ],
     "etymology": "Dal greco 'prognōstikós', da 'pro-' e 'gignṓskein' «conoscere».",
-    "curiosity": "Il greco 'gignṓskein' («conoscere») è la stessa radice di 'diagnosi' e di 'prognosi'.",
+    "curiosity": "Stessa radice di 'diagnosi' e di 'prognosi'.",
     "category": "comune",
     "difficulty": 1
   },
@@ -5664,7 +5664,7 @@
     "id": "raffazzonato",
     "term": "raffazzonato",
     "pos": "agg.",
-    "meaning": "Fatto in modo approssimativo e disordinato, senza cura.",
+    "meaning": "Rimesso insieme alla meglio per mascherare difetti o lacune.",
     "examples": [
       "Un piano raffazzonato all'ultimo momento.",
       "Una traduzione raffazzonata piena di errori."
@@ -6420,7 +6420,7 @@
     "pos": "agg.",
     "meaning": "Che agisce con grande energia e determinazione, spesso in difesa di qualcosa.",
     "examples": [
-      "Un strenuo difensore dei diritti civili.",
+      "Uno strenuo difensore dei diritti civili.",
       "Uno strenuo tentativo di salvare l'azienda."
     ],
     "synonyms": [
@@ -6870,7 +6870,6 @@
       "bramare"
     ],
     "etymology": "Da 'vago' nel senso antico di «bello, desiderabile».",
-    "curiosity": "Dentro c'è 'vago' nel senso antico di «bello, desiderabile», non in quello di «impreciso»: un falso amico dentro la nostra stessa lingua.",
     "category": "letteraria",
     "difficulty": 4
   },
@@ -6908,7 +6907,7 @@
       "vendibile"
     ],
     "etymology": "Dal latino 'venalis', da 'venum' «vendita».",
-    "curiosity": "In latino 'venalis' era semplicemente ciò che si trovava in vendita, senza alcun giudizio: erano 'venales' anche gli schiavi messi sul mercato.",
+    "curiosity": "In latino non era un'accusa: erano 'venales' anche gli schiavi messi sul mercato.",
     "category": "comune",
     "difficulty": 2
   },
@@ -7341,7 +7340,7 @@
     "id": "bislacco",
     "term": "bislacco",
     "pos": "agg.",
-    "meaning": "Stravagante e un po' balordo, fuori dal comune in modo bizzarro.",
+    "meaning": "Stravagante e un po' balordo nei modi o nelle abitudini.",
     "examples": [
       "Aveva l'abitudine bislacca di cenare all'alba."
     ],
@@ -7719,7 +7718,7 @@
     "id": "congerie",
     "term": "congerie",
     "pos": "s.f.",
-    "meaning": "Ammasso confuso e disordinato di cose diverse.",
+    "meaning": "Mucchio di cose accatastate alla rinfusa, senza alcun ordine.",
     "examples": [
       "Una congerie di appunti, ritagli e bozze senza ordine."
     ],
@@ -10284,7 +10283,7 @@
     "id": "subitaneo",
     "term": "subitaneo",
     "pos": "agg.",
-    "meaning": "Improvviso e rapidissimo.",
+    "meaning": "Che avviene tutto a un tratto, senza il minimo preavviso.",
     "examples": [
       "Un subitaneo cambio di programma."
     ],
@@ -10773,7 +10772,7 @@
       "villano",
       "grossolano"
     ],
-    "etymology": "Dal latino 'idioticus' «ignorante», attraverso il greco 'idiṓtēs' «privato cittadino, incompetente».",
+    "etymology": "Dal greco 'idiṓtēs' «privato cittadino, incompetente», attraverso il latino 'idioticus' «ignorante».",
     "category": "comune",
     "difficulty": 3
   },
@@ -11080,7 +11079,7 @@
       "tremito",
       "sussulto"
     ],
-    "etymology": "Dal latino 'fremitus', da 'fremere' «fremere».",
+    "etymology": "Dal latino 'fremitus', da 'fremere' «rumoreggiare, agitarsi».",
     "category": "letteraria",
     "difficulty": 2
   },
@@ -11122,7 +11121,7 @@
     "id": "ilare",
     "term": "ilare",
     "pos": "agg.",
-    "meaning": "Allegro e sereno, di buon umore.",
+    "meaning": "Che ride volentieri, di un'allegria che scoppia con facilità.",
     "examples": [
       "Un'ilare brigata di amici."
     ],
@@ -12197,7 +12196,7 @@
     "id": "crapula",
     "term": "crapula",
     "pos": "s.f.",
-    "meaning": "Eccesso smodato nel mangiare e nel bere.",
+    "meaning": "Gozzoviglia prolungata, fatta di vino e di cibo fino allo stordimento.",
     "examples": [
       "Una notte di crapula seguita da un giorno di rimorsi."
     ],
@@ -12592,7 +12591,7 @@
     "id": "enfio",
     "term": "enfio",
     "pos": "agg.",
-    "meaning": "Gonfio; figurato, tronfio e ampolloso.",
+    "meaning": "Gonfio e tronfio: detto di stile pieno di sé più che di corpi.",
     "examples": [
       "Uno stile enfio, tutto aggettivi."
     ],
@@ -13008,7 +13007,7 @@
     "meaning": "Pesante e opprimente; volgare e grossolano.",
     "examples": [
       "Un'aria greve di fumo e stanchezza.",
-      "Una battuta greve che nessuno rise."
+      "Una battuta greve che non fece ridere nessuno."
     ],
     "synonyms": [
       "pesante",
@@ -14719,7 +14718,7 @@
     "id": "stravizio",
     "term": "stravizio",
     "pos": "s.m.",
-    "meaning": "Eccesso smodato nel bere, nel mangiare o nei piaceri.",
+    "meaning": "Abitudine agli eccessi che logora il fisico.",
     "examples": [
       "Una vita di stravizi che il fegato non perdonò."
     ],
@@ -15116,7 +15115,7 @@
     "id": "tumido",
     "term": "tumido",
     "pos": "agg.",
-    "meaning": "Gonfio, turgido; figurato, ampolloso.",
+    "meaning": "Gonfio e teso, detto soprattutto di labbra e di carni.",
     "usage": "«labbra tumide»",
     "examples": [
       "Labbra tumide e occhi gonfi di pianto."
@@ -16740,7 +16739,7 @@
       "sgomento"
     ],
     "etymology": "Da 'raccapricciare', da 'capriccio' nel senso antico di «brivido».",
-    "curiosity": "'Capriccio' significava «brivido» (da 'capo' e 'riccio', i capelli che si rizzano) prima di significare «voglia improvvisa»: raccapriccio conserva il senso antico.",
+    "curiosity": "'Capriccio' è 'capo' e 'riccio', i capelli che si rizzano: il senso di «voglia improvvisa» è venuto dopo.",
     "category": "comune",
     "difficulty": 3
   },

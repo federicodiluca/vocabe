@@ -64,12 +64,22 @@ export function stemOf(term: string): string {
   return fold(term).slice(0, Math.max(4, term.length - 3))
 }
 
+const listsAsSynonym = (a: Word, b: Word) =>
+  (a.synonyms ?? []).some((s) => fold(s) === fold(b.term))
+
 /**
- * True when one word gives the other away: its definition contains the other's
- * root ("bruma" in an option when the question is about "brumoso"), in either
- * direction. Such a pair must never sit in the same question.
+ * True when one word gives the other away, in either direction:
+ *
+ *   - its definition contains the other's root ("bruma" in an option when the
+ *     question is about "brumoso");
+ *   - the dataset lists one as a synonym of the other ("torvo" / "bieco"), in
+ *     which case both definitions fit the prompt and the question has no single
+ *     right answer.
+ *
+ * Such a pair must never sit in the same question.
  */
 export function leaks(a: Word, b: Word): boolean {
+  if (listsAsSynonym(a, b) || listsAsSynonym(b, a)) return true
   const ma = fold(a.meaning)
   const mb = fold(b.meaning)
   return new RegExp(`\\b${stemOf(a.term)}`).test(mb) || new RegExp(`\\b${stemOf(b.term)}`).test(ma)
