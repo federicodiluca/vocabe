@@ -57,6 +57,7 @@ ul.ex li{font-family:Georgia,serif;font-style:italic;color:#57534e;margin:.3rem 
 .glossary a{display:block;padding:.2rem 0}
 .letter{break-inside:avoid;margin-bottom:1rem}
 .letter h2{margin:.5rem 0 .2rem}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #e7e2d9;font-size:.8rem;color:#57534e;text-align:center}
 @media(max-width:600px){.glossary{columns:1}}
 `.trim()
 
@@ -87,7 +88,8 @@ function shell({ title, description, canonical, jsonLd, body }) {
 <style>${CSS}</style>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 </head>
-<body><div class="wrap">${body}</div></body>
+<body><div class="wrap">${body}
+<footer>Un progetto di <a href="https://federicodiluca.github.io/" rel="author">Federico Di Luca</a> · <a href="${BASE}privacy/">Privacy</a></footer></div></body>
 </html>
 `
 }
