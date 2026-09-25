@@ -90,6 +90,20 @@ describe('distractors and part of speech', () => {
     expect(offenders).toEqual([])
   })
 
+  it('treats a pair listed as synonyms as a leak', () => {
+    const torvo = getWord('torvo')!
+    const bieco = getWord('bieco')!
+    expect(torvo.synonyms).toContain('bieco')
+    expect(leaks(torvo, bieco)).toBe(true)
+    expect(leaks(bieco, torvo)).toBe(true)
+  })
+
+  it('still fills four options for every word (whole dataset)', () => {
+    const rng = seededRng(9)
+    const short = WORDS.filter((w) => makeQuestion(w, 'forward', rng).options.length !== 4)
+    expect(short.map((w) => w.term)).toEqual([])
+  })
+
   it('no definition contains its own word or root (whole dataset)', () => {
     const fold = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
     const bad = WORDS.filter((w) => new RegExp('\\b' + stemOf(w.term)).test(fold(w.meaning))).map((w) => w.term)
