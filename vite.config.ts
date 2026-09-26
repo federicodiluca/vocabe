@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { fileURLToPath, URL } from 'node:url'
 
-// Project page on GitHub Pages (federicodiluca.github.io/vocabe) — dev server keeps serving at "/".
-const base = process.env.GITHUB_PAGES ? '/vocabe/' : '/'
+// Served at the root of vocabe.federicodiluca.com (custom domain on GitHub Pages).
+const base = '/'
 
 export default defineConfig({
   base,

@@ -18,8 +18,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const dist = resolve(root, 'dist')
 const words = JSON.parse(readFileSync(resolve(root, 'src/data/words.json'), 'utf8'))
 
-const BASE = process.env.GITHUB_PAGES ? '/vocabe/' : '/'
-const SITE = 'https://federicodiluca.github.io/vocabe/'
+const BASE = '/'
+const SITE = 'https://vocabe.federicodiluca.com/'
 const TODAY = new Date().toISOString().slice(0, 10)
 
 const esc = (s) =>
@@ -89,7 +89,7 @@ function shell({ title, description, canonical, jsonLd, body }) {
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 </head>
 <body><div class="wrap">${body}
-<footer>Un progetto di <a href="https://federicodiluca.github.io/" rel="author">Federico Di Luca</a> · <a href="${BASE}privacy/">Privacy</a></footer></div></body>
+<footer>Un progetto di <a href="https://federicodiluca.com/" rel="author">Federico Di Luca</a> · <a href="${BASE}privacy/">Privacy</a></footer></div></body>
 </html>
 `
 }

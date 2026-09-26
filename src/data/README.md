@@ -5,5 +5,5 @@
 completo in [LICENSE](LICENSE). Non sono coperti dalla licenza MIT del resto del repository.
 
 Puoi riusarli, anche a scopo commerciale, a due condizioni: citare la fonte
-(«Vocabe, Federico Di Luca, federicodiluca.github.io/vocabe») e rilasciare le
+(«Vocabe, Federico Di Luca, vocabe.federicodiluca.com») e rilasciare le
 eventuali modifiche con la stessa licenza.

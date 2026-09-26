@@ -24,6 +24,6 @@ export const router = createBrowserRouter(
       ],
     },
   ],
-  // Vite's BASE_URL is "/" in dev and "/vocabe/" when built for GitHub Pages.
+  // Vite's BASE_URL ("/": the app is served at the domain root).
   { basename: import.meta.env.BASE_URL },
 )

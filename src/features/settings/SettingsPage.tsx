@@ -208,7 +208,7 @@ export function SettingsPage() {
       <p className="text-center text-xs text-ink-soft">
         Un progetto di{' '}
         <a
-          href="https://federicodiluca.github.io/"
+          href="https://federicodiluca.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline"

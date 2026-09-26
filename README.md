@@ -2,7 +2,7 @@
 
 Una parola italiana al giorno: significato, esempi, etimologia. Il giorno dopo un quiz per ripassarla.
 
-**[federicodiluca.github.io/vocabe](https://federicodiluca.github.io/vocabe/)**
+**[vocabe.federicodiluca.com](https://vocabe.federicodiluca.com/)**
 
 Ripetizione spaziata per il ripasso, glossario di 1027 parole e raccolte tematiche da
 completare. Web app (PWA), funziona offline. Nessun account: i progressi stanno in
@@ -38,7 +38,8 @@ scripts/
 ## Deploy
 
 GitHub Actions pubblica su GitHub Pages a ogni push su `main`
-(`.github/workflows/deploy.yml`). Il `base` diventa `/vocabe/` solo con `GITHUB_PAGES=true`.
+(`.github/workflows/deploy.yml`), servito dal dominio personalizzato `vocabe.federicodiluca.com`
+(impostato in Settings → Pages del repository).
 
 ## Note
 
@@ -53,4 +54,4 @@ citando Vocabe e mantenendo la stessa licenza.
 
 ---
 
-[Federico Di Luca](https://federicodiluca.github.io/)
+[Federico Di Luca](https://federicodiluca.com/)
