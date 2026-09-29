@@ -53,6 +53,8 @@ export type Settings = {
   textSize: TextSize
   /** display name used when challenging a friend */
   name: string
+  /** the reader closed the "install the app" hint on the daily page */
+  installHintDismissed: boolean
 }
 
 export type ProgressState = {

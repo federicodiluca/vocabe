@@ -8,6 +8,7 @@ import { Card } from '@/ui/Card'
 import { Icon } from '@/ui/Icon'
 import { WordDetails } from './WordDetails'
 import { ShareSheet } from './ShareSheet'
+import { InstallHint } from '@/features/install/InstallButton'
 import { BonusWordCard } from './BonusWordCard'
 
 const todayLabel = () =>
@@ -83,6 +84,8 @@ function DailyWord({ today }: { today: string }) {
       )}
 
       {learned && pick.bonusId && <BonusWordCard wordId={pick.bonusId} />}
+
+      {learned && <InstallHint />}
 
       <ShareSheet word={word} daily open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>

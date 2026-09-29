@@ -11,6 +11,7 @@ export const DEFAULT_SETTINGS: Settings = {
   readingFont: 'serif',
   textSize: 'normale',
   name: '',
+  installHintDismissed: false,
 }
 
 /** A fresh 32-bit seed. Persisted on first save, so a reader's sequence never changes. */

@@ -1,6 +1,7 @@
 import { useMemo, useSyncExternalStore } from 'react'
 import type { ProgressState } from '@/core/types'
 import { pickDaily, type DailyPick } from '@/core/content/picker'
+import { getInstallState, subscribeInstall, type InstallState } from '@/core/install'
 import { getProgress, subscribeProgress } from './store'
 
 /**
@@ -54,4 +55,9 @@ export function useDailyPick(today: string): DailyPick {
     if (daily?.date === today) return daily
     return pickDaily({ level, seed, learned, known, recent })
   }, [daily, today, level, seed, learned, known, recent])
+}
+
+/** Whether the app is installed, and whether the browser offers its own install dialog. */
+export function useInstallState(): InstallState {
+  return useSyncExternalStore(subscribeInstall, getInstallState, getInstallState)
 }

@@ -114,6 +114,12 @@ const ICONS: Record<string, ReactNode> = {
       <path d="M9 12l2 2 4-4" />
     </>
   ),
+  install: (
+    <>
+      <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
+      <path d="M12 7.5v7M9 11.5l3 3 3-3M10.5 18.5h3" />
+    </>
+  ),
   calendar: (
     <>
       <rect x="3.5" y="5.5" width="17" height="15" rx="2.5" />

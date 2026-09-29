@@ -8,6 +8,7 @@ import type { ReadingFont, TextSize, ThemeSetting } from '@/core/types'
 import { Button } from '@/ui/Button'
 import { Icon } from '@/ui/Icon'
 import { cn } from '@/ui/cn'
+import { InstallButton } from '@/features/install/InstallButton'
 import { InviteSheet } from './InviteSheet'
 
 const THEMES: { value: ThemeSetting; label: string }[] = [
@@ -86,6 +87,8 @@ export function SettingsPage() {
 
   return (
     <div className="space-y-6 pt-2">
+      <InstallButton />
+
       <section>
         <h2 className="mb-2 text-sm font-semibold text-ink-soft">Livello di partenza</h2>
         <p className="mb-3 text-xs text-ink-soft">
