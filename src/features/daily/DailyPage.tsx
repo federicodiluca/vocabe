@@ -83,9 +83,9 @@ function DailyWord({ today }: { today: string }) {
         </div>
       )}
 
-      {learned && pick.bonusId && <BonusWordCard wordId={pick.bonusId} />}
+      <InstallHint />
 
-      {learned && <InstallHint />}
+      {learned && pick.bonusId && <BonusWordCard wordId={pick.bonusId} />}
 
       <ShareSheet word={word} daily open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>
